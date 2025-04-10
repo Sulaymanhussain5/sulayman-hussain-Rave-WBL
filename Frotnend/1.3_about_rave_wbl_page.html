@@ -1,0 +1,75 @@
+<!--------------------------------------------------------------------------STARTING OFF HTML DOCUMENT------------------------------------------------------------->
+<!--Before developing in HTML, i am setting up a document by adding the styles that will be used to make the page user friendly and intuitive  and it additionally adds a 
+bootstrap API which is used to make some of the website dynamic which is based on the class name that has been inserted in each containers. This way it saves time for developers
+to style all the component or elements to make the web page user friendly (<link>). Additionally it uses <meta> tag to set up the view point of the screen which is crucial to make 
+the system available to different screen size like phones, tablets, desktop (making it responsive). Additionally it uses <meta> tag to insert a UTF (Unicode Transform Unit)-8 which adds 
+different type of special characters and special symbols in the website  -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ABOUT RAVE WBL</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/chatbot.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
+
+</head>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<body>
+<!---------------------------------HEADER----------------------------------------------------->
+<nav class="navigationBoxContainer"> <!--Using "<nav> to add a navigation box, additionally it has a attribute of "class" which is name "navigationBoxContainer" is used as a reference when using css to style this component-->
+    <a href="1.0_studentPortal_homepage.html"><img src="Assets/rave_wbl_logo_v2.png" class="rave-wbl-logo" alt="Rave WBL Logo"></a> <!--Using "<a>" tag to link to html document of "1.0_studentPortal_homepage.html" by using attribute of "href", once the students clicks in the Rave WBL logo which is stored in "<img>" ("src="Assets/rave_wbl_logo_v2.png" (directory in where the image is stored)). Additionally, adding "alt" attribute to insert the name of the image-->
+    <a href="1.1_course.html" class="links">Course</a> <!--Using "<a>" tag to link to html document of "1.1_course.html" by using attribute of "href", once the students clicks in the nav link "course"-->
+    <a href="1.0_studentPortal_homepage.html" class="links">Job Portal</a> <!--Using "<a>" tag to link to html document of "1.2_account_management_page.html" by using attribute of "href", once the students clicks in the nav link "Account Management"-->
+    <a href="1.3_about_rave_wbl_page.html" class="links">About Rave WBL</a> <!--Using "<a>" tag to link to html document of "1.3_about_rave_wbl_page.html" by using attribute of "href", once the students clicks in the nav link "About Rave WBL"-->
+    <a href="1.4_account_page.html"><img src="Assets/account_icon.png" class="accountIcon" alt="Account Icon"></a></div> <!--Using "<a>" tag to link to html document of "1.4_account_page.html" by using attribute of "href", once the students clicks in the account icon which is stored in "<img>" ("src="Assets/account_icon.png"  (directory in where the image is stored)).Additionally, adding "alt" attribute to insert the name of the image-->
+</nav> <!--Close the nav tag-->
+<!---------------------------------------------------------------------------------------->
+
+    <!---------------------------------CHATBOT----------------------------------------------------->
+    <div class="chatbot-container"> <!--Using "<div>" tag to add a component of chatbot, this holds all elements that will be included in the chatbot button. Additionally, attribute of "class" which is named "chatbot-container" is used as a reference when using css to style this component -->
+        <button class="chatbot-button"><a href="http://127.0.0.1:5000/"> <img src="Assets/chat_icon.png"></a></button></button> <!--Using "<button>" tag to add a button which will be used for opening the chatbot, which is stored in flask localhost of "127.0.0.1:5000" once the button has been clicked, "<img>" is stored inside the button tag which will be a chat icon ("src="Assets/chat_icon.png"")-->
+    </div> <!--Close the div tag-->
+    <!---------------------------------------------------------------------------------------------->
+
+
+
+    <!-------------------------------------------------------TALKING ABOUT WBL-------------------------------->
+    <!--I have talked a little about Rave WBL Placement Platform where, which uses a <p> tag to insert little information about Rave WBL and
+        adds a heading using <h1> for the title of the page and using <img> to add a logo-->
+    <div class="about-rave-wbl-container">
+        <h1 style="font-size: 34px;">About Rave WBL</h1>
+        <p style="font-size: 38px;">Rave WBL is a job vacancy students for students who are doing WBL module.All job
+            vacancies are related to WBL
+            module. It makes it easier for students to search for jobs they are looking for, easing stresses and time
+            when it comes to job search within their course fields.
+            There are variety of jobs that are available that is solely related to courses students are doing such as
+            Computer Science, Fashion, Cyber Security, etc. Rave WBL will also enable students to communicate with AI to
+            discuss questions about WBL and job availability. Additionally,
+            AI chatbot can also analyse and provide feedback to students documents such as their CV, allowing students
+            to know their strengths and weaknesses in CV. If you want to discuss with human professionals, contact
+            <b>ravewbl@rave.ac.uk</b> server to answer any questions relating to WBL and
+            job availability.
+        </p>
+        <img src="Assets/rave_wbl_logo_v2.png" width="200px" height="200px">
+    </div>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------FOOTER------------------------------------------------------------------------->
+    <div class="footer-container"> <!--Using "<div>" tag to add a component of footer, this holds all elements that will be included in the footer  (footer). Additionally, attribute of "class" which is named "footer-container" is used as a reference when using css to style this component -->
+        <footer> <!--Using "<footer>" tag to insert footer of the webpage, this will hold all footer elements-->
+            <img src="Assets/rave_wbl_logo_v2.png" alt="Rave WBL Logo"> <!--Using "<img>" tag to insert aws logo of Rave WBL (src="Assets/rave_wbl_logo.png"). Additionally, "alt" attribute is used to add image name -->
+            <p>Copyright &copy; Rave WBL All Rights Reserved</p> <!--Using "<p>" tag to insert a text within the footer which will state the copy right, it uses "&copy" which inserts  "©"-->
+        </footer>  <!--Close footer tag-->
+    </div>  <!--Close div tag-->
+    <!------------------------------------------------------------------------------------------------------------------------->
+
+
+</body>
+
+</html>

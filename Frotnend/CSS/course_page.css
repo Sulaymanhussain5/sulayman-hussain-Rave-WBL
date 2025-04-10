@@ -1,0 +1,32 @@
+.searchBox { /*The class name in div ("searchBox") */
+    width: 804px; /*Setting the width to 804 pixels  */
+    height: 89px; /*Setting the height to 89 pixels  */
+    border: 10px solid black; /*Adding border of 10 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 60px; /*Adding "border-radius" of 60 pixels which means that it makes the corner curved by 5 pixels  */
+    color: #807979; /*Setting the text colour to  grey */
+    font-size: 40px; /*Setting the font size to 40 pixels */
+}
+
+.course-container { /*The class name in div ("course-container") */
+    display: grid; /*Using grid method in "display" which adds grids to the elements  within the form tag in, which is used to organise the container in coloumns */
+    grid-template-columns: repeat(3, 1fr); /*Adding "grid-template-columns" to lay out the elements in columns where 3 containers are added in 1 space before moving to next line of the page and each coloumns gets 1 equal space ("repeat(3, 1fr)", whee fr stands for "fraction"*/
+    gap: 10px; /*Adding "gap" of 10 pixels in adding space when adding container in the new line*/
+}
+
+.course-container div { /*The class name in div ("course-container") which styles the div tags*/
+    border: 10px solid black; /*Adding border of 10 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 10px; /*Adding "border-radius" of 10 pixels which means that it makes the corner curved by 10 pixels  */
+    width: 60%; /*Setting the width to 60%  */
+}
+
+@media screen and (max-width: 780px) { /*By using @media (media query) screen, to add responsiveness course contents, where once the max width of the screen size is 780 pixels then the elements that is defined in this function will be responsive. 780 pixels is best screen size for mobile and phone, which is why this has been set */
+    .course-container{ /*The class name in div ("course-container") which styles   div tag to make the contents it responsive*/
+        display: grid; /*Using grid method in "display" which adds grids to the elements  within the form tag in, which is used to organise the container in coloumns */
+        grid-template-columns: repeat(1, 1fr); /*Adding "grid-template-columns" to lay out the elements in columns where 1 containers are added in 1 space before moving to next line of the page and each coloumns gets 1 equal space ("repeat(3, 1fr)", whee fr stands for "fraction"*/
+        gap: 10px; /*Adding "gap" of 10 pixels in adding space when adding container in the new line*/
+    }
+
+    .course-container b{ /*The class name in div ("course-container") which styles the b tag to make the course name disapear once screensize is changed to max width of 780 pixels*/
+        display: none; /*Setting "display" of none which means that elements are not visable*/
+    }
+}

@@ -1,0 +1,179 @@
+p { /*Styling P tag*/
+    text-align: center; /*Adding "text-align" of center which aligns the text in the middle (center) of the page  */
+    font-size: 30px; /*Setting the font size of the text to 30 pxiels */
+}
+
+.application-form { /*The class name in div ("application-form")*/
+    display: grid; /*Using grid method in "display" which adds grids to the elements  within the form tag in, which is used to organise the container in coloumns */
+    place-items: center; /*Adding "place-items" of center, which alligns the contents within the div elements to center of the page*/
+    border: 10px solid black; /*Adding border of 10 pixels around the elements  with solid type which is coloured as black  */
+    width: 50%; /*Setting the width to 50%   */
+    padding: 20px; /*Setting padding to 20 pixels which adds spaces within the container to avoide tags or contents joined up together*/
+    margin: auto; /*Setting "margin" to auto which means that it automatically makes the space in left and right hand side of the element equal */
+}
+
+.submit { /*The class name in button ("submit")*/
+    display: block; /*Using block method in "display" which adds block to the image tag, where it makes it easier for the image element to align to the center of the page */
+    margin: 0 auto; /*Adding "margin" of 0 which means that it sets the top and bottom margins to 0 and automatically centers the image center horrinzontally */
+    background-color: blue; /*Setting the background colour to  blue */
+    color: #ffff; /*Setting the background colour to  white */
+    border: 10px solid black; /*Adding border of 10 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 10px; /*Adding "border-radius" of 10 pixels which means that it makes the corner curved by 10 pixels  */
+    width: 330px; /*Setting the width to 330 pixels  */
+    height: 82px; /*Setting the height to 82 pixels*/
+    cursor: pointer; /*Adding a pointer to the cursor once it has been landed to the "SUBMIT" button*/
+}
+
+.submit:hover { /*The class name in div ("submit") which styles button once mouse is hovering to the button */ 
+    color: blue; /*Setting the text colour to  blue */
+    background-color: #ffff; /*Setting the background colour to  white */
+}
+
+
+.application-form label { /*The class name in div ("application-form") which styles lebel tag*/
+    font-size: 22px; /*setting the font size to 22 pixels*/
+}
+
+.personal-statement input { /*The class name in div ("personal-statement") which styles input tag */ 
+    border: 1px solid black; /*Adding border of 1 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    width: 511px; /*Setting the width to 511 pixels  */
+    height: 30px; /*Setting the width to 30 pixels  */
+}
+
+.Avalability input { /*The class name in div ("Avalability") which styles input tag */ 
+    border: 1px solid black; /*Adding border of 1 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    width: 511px; /*Setting the width to 511 pixels  */
+    height: 30px; /*Setting the height to 30 pixels  */
+}
+
+.Avalability button{ /*The class name in div ("Avalability") which styles button tag */ 
+    background-color: blue; /*Setting the background colour to  blue */
+    color: white; /*Setting the text colour to  white */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    cursor: pointer; /*Adding a pointer to the cursor once it has been landed to the "ADD" button*/
+    width: 82px; /*Setting the width to 82 pixels  */
+    height: 42px; /*Setting the height to 42 pixels  */
+}
+
+.Avalability button:hover{ /*The class name in div ("Avalability") which styles button once mouse is hovering to the button */ 
+    background-color: white; /*Setting the background colour to  white */
+    color: blue; /*Setting the text colour to  blue */
+}
+
+.skills input { /*The class name in div ("skills") which styles input tag */ 
+    border: 1px solid black; /*Adding border of 1 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    width: 511px; /*Setting the width to 511 pixels  */
+    height: 30px; /*Setting the height to 30 pixels  */
+}
+
+.skills button{ /*The class name in div ("skills") which styles button tag */ 
+    background-color: blue; /*Setting the background colour to  blue */
+    color: white; /*Setting the text colour to  white */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    cursor: pointer; /*Adding a pointer to the cursor once it has been landed to the "ADD" button*/
+    width: 82px; /*Setting the width to 82 pixels  */
+    height: 42px; /*Setting the height to 42 pixels  */
+}
+
+.skills button:hover{ /*The class name in div ("skills") which styles button once mouse is hovering to the button */ 
+    background-color: white; /*Setting the background colour to  white */
+    color: blue; /*Setting the text colour to  blue */
+}
+
+.experience input { /*The class name in div ("experience") which styles input tag */ 
+    border: 1px solid black; /*Adding border of 1 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    width: 511px; /*Setting the width to 511 pixels  */
+    height: 30px; /*Setting the height to 30 pixels  */
+}
+
+.experience button{ /*The class name in div ("experience") which styles button tag */ 
+    background-color: blue; /*Setting the background colour to  blue */
+    color: white; /*Setting the text colour to  white */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    cursor: pointer; /*Adding a pointer to the cursor once it has been landed to the "ADD" button*/
+    width: 82px; /*Setting the width to 82 pixels  */
+    height: 42px; /*Setting the height to 42 pixels  */
+}
+
+.experience button:hover{ /*The class name in div ("experience") which styles button once mouse is hovering to the button */ 
+    background-color: white; /*Setting the background colour to  white */
+    color: blue; /*Setting the text colour to  blue */
+}
+
+.certtification input { /*The class name in div ("certtification") which styles input tag */ 
+    border: 1px solid black; /*Adding border of 1 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    width: 511px; /*Setting the width to 511 pixels  */
+    height: 30px; /*Setting the height to 30 pixels  */
+}
+
+.certtification button{ /*The class name in div ("certtification") which styles button tag */
+    background-color: blue; /*Setting the background colour to  blue */
+    color: white; /*Setting the text colour to  white */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    cursor: pointer; /*Adding a pointer to the cursor once it has been landed to the "ADD" button*/
+    width: 82px; /*Setting the width to 82 pixels  */
+    height: 42px; /*Setting the height to 42 pixels  */
+}
+
+.certtification button:hover{ /*The class name in div ("certtification") which styles button once mouse is hovering to the button */ 
+    background-color: white; /*Setting the background colour to  white */
+    color: blue; /*Setting the text colour to  blue */
+}
+
+.link input { /*The class name in div ("link") which styles input tag */ 
+    border: 1px solid black; /*Adding border of 1 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    width: 511px; /*Setting the width to 511 pixels  */
+    height: 30px; /*Setting the height to 30 pixels  */
+}
+
+.link button{ /*The class name in div ("link") which styles button tag */
+    background-color: blue; /*Setting the background colour to  blue */
+    color: white; /*Setting the text colour to  white */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    cursor: pointer; /*Adding a pointer to the cursor once it has been landed to the "ADD" button*/
+    width: 82px; /*Setting the width to 82 pixels  */
+    height: 42px; /*Setting the height to 42 pixels  */
+}
+
+.link button:hover{ /*The class name in div ("link") which styles button once mouse is hovering to the button */ 
+    background-color: white; /*Setting the background colour to  white */
+    color: blue; /*Setting the text colour to  blue */
+}
+
+@media screen and (max-width: 780px) { /*By using @media (media query) screen, to add responsiveness applicarion form and input box within the form, where once the max width of the screen size is 780 pixels then the elements that is defined in this function will be responsive. 780 pixels is best screen size for mobile and phone, which is why this has been set */
+
+.application-form{ /*The class name in div ("application-form") which styles  form tag to make it responsive*/
+    width: fit-content; /*Setting "width" to fit-content which means once screen is adjusted, the width of the form will also be adjusted*/
+}
+
+.personal-statement input{ /*The class name in div ("personal-statement") which styles  input tag to make it responsive*/
+    width: fit-content; /*Setting "width" to fit-content which means once screen is adjusted, the width of the input box will also be adjusted*/
+}
+
+.Avalability input{ /*The class name in div ("Avalability") which styles  input tag to make it responsive*/
+    width: fit-content; /*Setting "width" to fit-content which means once screen is adjusted, the width of the input box will also be adjusted*/
+}
+
+.skills input{ /*The class name in div ("skills") which styles  input tag to make it responsive*/
+    width: fit-content; /*Setting "width" to fit-content which means once screen is adjusted, the width of the input box will also be adjusted*/
+}
+
+.experience input{ /*The class name in div ("experience") which styles  input tag to make it responsive*/
+    width: fit-content; /*Setting "width" to fit-content which means once screen is adjusted, the width of the input box will also be adjusted*/
+}
+
+.certtification input{ /*The class name in div ("certtification") which styles  input tag to make it responsive*/
+    width: fit-content; /*Setting "width" to fit-content which means once screen is adjusted, the width of the input box will also be adjusted*/
+}
+
+.link input{ /*The class name in div ("link") which styles  input tag to make it responsive*/
+    width: fit-content; /*Setting "width" to fit-content which means once screen is adjusted, the width of the input box will also be adjusted*/
+}
+
+}

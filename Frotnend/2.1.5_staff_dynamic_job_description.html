@@ -1,0 +1,50 @@
+<!DOCTYPE html> <!--Using "<!DOCTYPE>" tag  is used to  defines that this is a html documents-->
+<html> <!-- Using "<html>" tag is used  for  main tag that starts the html documents-->
+
+<head>  <!--Using "<head>" tag is used to add stylesheet which will be supported in styling the header, footer, chatbot and overview of the website. Additionally it also contains the name of the tab of the website-->
+    <title>STAFF Job Description Page</title> <!--Using "<title>" tag is used to define the name of the tab, which will be called "Inteblu -Fashion Designer Job Description"-->
+    <meta charset="UTF-8"> <!--Using "<meta>" tag with attribute of "charset" which deals with how should characters should be stored, by using the charset type of "UTF (Unicode Transform Unit)-8" this can store all special sybols and different languages-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Using meta tag with attribute of "name" which defines the name of the meta tag which will be "viewpoint" since it deals with making the system responsive to all devices where the "content="width=device-width" makes the webpage fit into all devices, without other elements getting squashed, and "initial-scale=1.0" sets the zoom level which will be 1.0 -->
+    <link rel="stylesheet" href="CSS/header.css"> <!--Using "<link>" tag to link the CSS document (using rel attribute of "stylesheet") to global.css which deals with the overall website design-->
+    <link rel="stylesheet" href="CSS/header.css"> <!--Using "<link>" tag to link the CSS document (using rel attribute of "stylesheet") to header.css which deals with the header design-->
+    <link rel="stylesheet" href="CSS/footer.css"> <!--Using "<link>" tag to link the CSS document (using rel attribute of "stylesheet") to footer.css which deals with the footer  design-->
+    <link rel="stylesheet" href="CSS/chatbot.css"> <!--Using "<link>" tag to link the CSS document (using rel attribute of "stylesheet") to chatbot.css which deals with the chatbot  design-->
+    <link rel="stylesheet" href="CSS/job_description.css"> <!--Using <link> tag to link the CSS document (using rel attribute of "stylesheet") to "job_description.css" which deals with the job description page design-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
+
+</head> <!--Close the head tag-->
+
+<body> <!--body tag is used to store all contents within the webpage-->
+
+     <!---------------------------------HEADER----------------------------------------------------->
+
+     <nav class="navigationBoxContainer"> <!--Using "<nav> to add a navigation box, additionally it has a attribute of "class" which is name "navigationBoxContainer" is used as a reference when using css to style this component-->
+        <a href="2.0_staffPortal_homepage.html"><img src="Assets/rave_wbl_logo_v2.png" class="rave-wbl-logo"></a> <!--Using "<a>" tag to link to html document of "2.0_staffPortal_homepage.html" by using attribute of "href", once the students clicks in the Rave WBL logo which is stored in "<img>" ("src="Assets/rave_wbl_logo_v2.png" (directory in where the image is stored)). Additionally, adding "alt" attribute to insert the name of the image-->
+        <a href="2.1_staff_portal_job_portal.html" class="links">Jobs Portal</a> <!--Using "<a>" tag to link to html document of "2.1_staff_portal_job_portal.html" by using attribute of "href", once the students clicks in the nav link "course"-->
+        <a href="2.2_staff_portal_student_progress.html" class="links">Student Progress</a> <!--Using "<a>" tag to link to html document of "2.2_staff_portal_student_progress.html" by using attribute of "href", once the students clicks in the nav link "course"-->
+        <a href="2.3_staff_portal_job_post_form_page.html" class="links">Job Post</a> <!--Using "<a>" tag to link to html document of "2.3_staff_portal_job_post_form_page.html" by using attribute of "href", once the students clicks in the nav link "course"-->
+        <a href="2.4_staff_portal_account_page.html"><img src="Assets/account_icon.png" class="accountIcon"></a> <!--Using "<a>" tag to link to html document of "2.4_staff_portal_account_page.html" by using attribute of "href", once the students clicks in the account icon which is stored in "<img>" ("src="Assets/account_icon.png"  (directory in where the image is stored)).Additionally, adding "alt" attribute to insert the name of the image-->
+    </nav> <!--Close the nav tag-->
+    <!-------------------------------------------------------------------------------------------->
+
+    <br></br> <!--Using "<br>" tag to add space-->
+    <div class="job-description-container" id="job-description-container">
+        <br></br> <!--Using "<br>" tag to add space-->
+    </div>
+    
+
+   <!------------------------------------------------FOOTER------------------------------------------------------------------------->
+   <div class="footer-container"> <!--Using "<div>" tag to add a component of footer, this holds all elements that will be included in the footer  (footer). Additionally, attribute of "class" which is named "footer-container" is used as a reference when using css to style this component -->
+    <footer> <!--Using "<footer>" tag to insert footer of the webpage, this will hold all footer elements-->
+        <img src="Assets/rave_wbl_logo_v2.png" alt="Rave WBL Logo"> <!--Using "<img>" tag to insert aws logo of Rave WBL (src="Assets/rave_wbl_logo.png"). Additionally, "alt" attribute is used to add image name -->
+        <p>Copyright &copy; Rave WBL All Rights Reserved</p> <!--Using "<p>" tag to insert a text within the footer which will state the copy right, it uses "&copy" which inserts  "©"-->
+    </footer>  <!--Close footer tag-->
+</div>  <!--Close div tag-->
+<!------------------------------------------------------------------------------------------------------------------------->
+
+
+<!---------------ADDING JAVASCRIPT DOCUMENT THAT ADDS DYNAMICS TO JOB DESCRIPTION PAGE---------------------->
+<script src="JavaScript/staffAdmin_job_description_dynamic.js"></script>
+<!------------------------------------------------------------------------------------------------------>
+</body> <!--Close body tag-->
+</html> <!--Close html tag-->

@@ -1,0 +1,146 @@
+<!--------------------------------------------------------------------------STARTING OFF HTML DOCUMENT------------------------------------------------------------->
+<!--Before developing in HTML, i am setting up a document by adding the styles that will be used to make the page user friendly and intuitive  and it additionally adds a 
+bootstrap API which is used to make some of the website dynamic which is based on the class name that has been inserted in each containers. This way it saves time for developers
+to style all the component or elements to make the web page user friendly (<link>). Additionally it uses <meta> tag to set up the view point of the screen which is crucial to make 
+the system available to different screen size like phones, tablets, desktop (making it responsive). Additionally it uses <meta> tag to insert a UTF (Unicode Transform Unit)-8 which adds 
+different type of special characters and special symbols in the website  -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ADMIN PORTAL STUDENT PROGRESS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/account.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/student_progress_table.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
+
+</head>
+
+<body>
+     <!---------------------------------HEADER----------------------------------------------------->
+     <nav class="navigationBoxContainer"> <!--Using "<nav> to add a navigation box, additionally it has a attribute of "class" which is name "navigationBoxContainer" is used as a reference when using css to style this component-->
+        <a href="3.0_admin.html"><img src="Assets/rave_wbl_logo_v2.png" class="rave-wbl-logo"></a> <!--Using "<a>" tag to link to html document of "3.0_admin.html" by using attribute of "href", once the students clicks in the Rave WBL logo which is stored in "<img>" ("src="Assets/rave_wbl_logo_v2.png" (directory in where the image is stored)). Additionally, adding "alt" attribute to insert the name of the image-->
+        <a href="3.0_admin.html" class="links">Admin</a> <!--Using "<a>" tag to link to html document of "3.0_admin.html" by using attribute of "href", once the students clicks in the nav link "Admin"-->
+        <a href="3.1_admin_job_portal.html" class="links">Jobs Portal</a> <!--Using "<a>" tag to link to html document of "3.1_admin_job_portal.html" by using attribute of "href", once the students clicks in the nav link "Job Portal"-->
+        <a href="3.2_admin_student_progressl.html" class="links">Student Progress</a> <!--Using "<a>" tag to link to html document of "3.2_admin_student_progressl.html" by using attribute of "href", once the students clicks in the nav link "Student Progress"-->
+        <a href="3.0_admin.html"><img src="Assets/account_icon.png" class="accountIcon"></a> <!--Using "<a>" tag to link to html document of "3.0_admin.html" by using attribute of "href", once the students clicks in the account icon which is stored in "<img>" ("src="Assets/account_icon.png"  (directory in where the image is stored)).Additionally, adding "alt" attribute to insert the name of the image-->
+    </nav>  <!--Close the nav tag-->
+        <!-------------------------------------------------------------------------------------------->
+
+    <br></br>
+
+    <div id="student-progress-table-container" class="student-progress-table-container">
+        <input type="search" id="student-search" placeholder="Search Student Detail here...">
+        <br></br>
+        <select class="filter"> <!--Using "<select>" tag to integrate drop down menu for project type with an attribute of "class" ("filter") for CSS referencing-->
+            <option>Project Type</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "Project Type" is a default choice which shows that they want both internal and external project.-->
+            <option>Internal</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "Internal" is  choice which shows that they want both internal project.-->
+            <option>External</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "External" is a  choice which shows that they want both external project.-->
+        </select> <!--Close select tag-->
+        <select class="filter"> <!--Using "<select>" tag to integrate drop down menu for job type with an attribute of "class" ("filter") for CSS referencing-->
+            <option>Job Type</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "Job Type" is a default choice which shows that they want all job types.-->
+            <option>Part Time</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "Part Time" is a  choice which shows that they want part time jobs.-->
+            <option>Internship</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "Internship" is a  choice which shows that they want internship jobs.-->
+            <option>Placement</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "Placement" is a  choice which shows that they want placement jobs.-->
+        </select> <!--Close select tag-->
+        <select class="filter"> <!--Using "<select>" tag to integrate drop down menu for courses with an attribute of "class" ("filter") for CSS referencing-->
+            <option>Course</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "Course" is a default choice which shows that they want all courses.-->
+            <option>Computer Science</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "Computer Science" is a  choice which shows that they want jobs within Computer Science field.-->
+            <option>Fashion</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "Fashion" is a  choice which shows that they want jobs within Fashion filed.-->
+            <option>CyberSecurity</option>
+            <br></br>
+        </select>
+        <table id="student-progress-table" class="student-progress-table">
+            <tr>
+                <th>Student ID</th>
+                <th>Job Name</th>
+                <th>Industry</th>
+                <th>Project Type</th>
+                <th>Job Type</th>
+                <th>Job Course</th>
+                <th>Student First Name</th>
+                <th>Student Last Name</th>
+                <th>Student Email Address</th>
+                <th>Student Gender</th>
+                <th>Student Avalability</th>
+                <th>Student Skills</th>
+                <th>Student Documents</th>
+                <th>Student Links</th>
+                <th>Status</th>
+            </tr>
+        </table>
+    </div>
+
+    <br></br>
+     <!------------------------------------------------FOOTER------------------------------------------------------------------------->
+     <div class="footer-container"> <!--Using "<div>" tag to add a component of footer, this holds all elements that will be included in the footer  (footer). Additionally, attribute of "class" which is named "footer-container" is used as a reference when using css to style this component -->
+        <footer> <!--Using "<footer>" tag to insert footer of the webpage, this will hold all footer elements-->
+            <img src="Assets/rave_wbl_logo_v2.png" alt="Rave WBL Logo"> <!--Using "<img>" tag to insert aws logo of Rave WBL (src="Assets/rave_wbl_logo.png"). Additionally, "alt" attribute is used to add image name -->
+            <p>Copyright &copy; Rave WBL All Rights Reserved</p> <!--Using "<p>" tag to insert a text within the footer which will state the copy right, it uses "&copy" which inserts  "©"-->
+        </footer>  <!--Close footer tag-->
+    </div>  <!--Close div tag-->
+    <!------------------------------------------------------------------------------------------------------------------------->
+
+    <!--------------------------------------------MAKING STUDENT PROGRESS TABLE DYNAMIC USING SCRIPT TAG---------------------------------------------------->
+    <!--I have used <script> tag to insert an javascript  within HTML document. This deals with making the table dynamic, once student has submitted their application
+        form then data is added in the table (<td> is used to add data). By doing this it sends a request to the backend (localhost 8080) where it gets student appliation form
+            and converts backend response to JSON where it will be used to extract and add the data to the front end of the system-->
+    <script>
+
+        //------------------------------------------FUNCTION FOR ADDING DYNAMIC STUDENT PROGRESS TABLE------------------------------------- 
+        // I have used asynchronous function (performing tasks whilst page is being used) where i added a dynamic table by using 
+        // innerHTML HTML property. Once student has applied for the job (submits their application form) it integrates it to the 
+        // student progress table. By doing this request has been made to the backend (8080) where it gets student 
+        // application form which is inputed in the collection in MongoDb database server. After receiving the response from the 
+        // backend, it converts it to json  where client side extracts the data and integrate to make the value, which uses "innerHTML//
+        async function studentProgressTable(){
+               try{
+                   const getStudentProgress = await fetch("http://localhost:8080/get-student-progress");
+                   const studentProgress = await getStudentProgress.json();    
+                   const tableContainer = document.getElementById("student-progress-table");
+                   console.log("Database has been received", studentProgress)
+                   studentProgress.forEach(studentProgressItem => {
+                       const studentTableRow = document.createElement('tr');
+                       studentTableRow.innerHTML = `
+                               <tr>
+                                   <td>${studentProgressItem.Student_id}</td>
+                                   <td>${studentProgressItem.Job_Name}</td>
+                                   <td>${studentProgressItem.Industry_Name}</td>
+                                   <td>${studentProgressItem.Project_Type}</td>
+                                   <td>${studentProgressItem.Job_Type}</td>
+                                   <td>${studentProgressItem.Course}</td>
+                                   <td>${studentProgressItem.First_Name}</td>
+                                   <td>${studentProgressItem.Last_Name}</td>
+                                   <td>${studentProgressItem.Student_Email}</td>
+                                   <td>${studentProgressItem.Gender}</td>
+                                    <td>${studentProgressItem.Avalability}</td>
+                                   <td>${studentProgressItem.Skills}</td>
+                                   <td>${studentProgressItem.Document}</td>
+                                   <td><a href="${studentProgressItem.Link}">Student Profile</a></td>
+                                   <td>${studentProgressItem.Status}</td>
+                                </tr>                        
+                       `
+                       tableContainer.appendChild(studentTableRow)
+                      
+                   })
+               }catch(err){
+                   console.log(err)
+               }
+           }
+           //---------------------------------------------------------------------------------------------------------------
+           window.onload = studentProgressTable;
+   </script>
+   <!-------------------------------------------------------------------------------------------------------------------------------------->
+
+   <!-------LINKING STUDENT SEARCH AND FILTER FUNCTION USING <SCRIPT SRC> METHOD------------------------->
+   <script src="JavaScript/student_search.js"></script>
+   <script src="JavaScript/student_filter.js"></script>
+   <!------------------------------------------------------------------------------------------------------>
+
+</body>
+</html>

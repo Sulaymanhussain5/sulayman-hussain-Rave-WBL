@@ -1,0 +1,156 @@
+<!--------------------------------------------------------------------------STARTING OFF HTML DOCUMENT------------------------------------------------------------->
+<!--Before developing in HTML, i am setting up a document by adding the styles that will be used to make the page user friendly and intuitive  and it additionally adds a 
+bootstrap API which is used to make some of the website dynamic which is based on the class name that has been inserted in each containers. This way it saves time for developers
+to style all the component or elements to make the web page user friendly (<link>). Additionally it uses <meta> tag to set up the view point of the screen which is crucial to make 
+the system available to different screen size like phones, tablets, desktop (making it responsive). Additionally it uses <meta> tag to insert a UTF (Unicode Transform Unit)-8 which adds 
+different type of special characters and special symbols in the website  -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ACCOUNT PAGE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/chatbot.css">
+    <link rel="stylesheet" href="CSS/account.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
+</head>
+<!------------------------------------------------------------------------------------------------------------------------------------------------>
+
+<body>
+        <!---------------------------------HEADER----------------------------------------------------->
+    <nav class="navigationBoxContainer"> <!--Using "<nav> to add a navigation box, additionally it has a attribute of "class" which is name "navigationBoxContainer" is used as a reference when using css to style this component-->
+        <a href="1.0_studentPortal_homepage.html"><img src="Assets/rave_wbl_logo_v2.png" class="rave-wbl-logo" alt="Rave WBL Logo"></a> <!--Using "<a>" tag to link to html document of "1.0_studentPortal_homepage.html" by using attribute of "href", once the students clicks in the Rave WBL logo which is stored in "<img>" ("src="Assets/rave_wbl_logo_v2.png" (directory in where the image is stored)). Additionally, adding "alt" attribute to insert the name of the image-->
+        <a href="1.1_course.html" class="links">Course</a> <!--Using "<a>" tag to link to html document of "1.1_course.html" by using attribute of "href", once the students clicks in the nav link "course"-->
+        <a href="1.0_studentPortal_homepage.html" class="links">Job Portal</a> <!--Using "<a>" tag to link to html document of "1.2_account_management_page.html" by using attribute of "href", once the students clicks in the nav link "Account Management"-->
+        <a href="1.3_about_rave_wbl_page.html" class="links">About Rave WBL</a> <!--Using "<a>" tag to link to html document of "1.3_about_rave_wbl_page.html" by using attribute of "href", once the students clicks in the nav link "About Rave WBL"-->
+        <a href="1.4_account_page.html"><img src="Assets/account_icon.png" class="accountIcon" alt="Account Icon"></a></div> <!--Using "<a>" tag to link to html document of "1.4_account_page.html" by using attribute of "href", once the students clicks in the account icon which is stored in "<img>" ("src="Assets/account_icon.png"  (directory in where the image is stored)).Additionally, adding "alt" attribute to insert the name of the image-->
+    </nav> <!--Close the nav tag-->
+    <!---------------------------------------------------------------------------------------->
+    <br></br>
+
+     <!---------------------------------CHATBOT----------------------------------------------------->
+     <div class="chatbot-container"> <!--Using "<div>" tag to add a component of chatbot, this holds all elements that will be included in the chatbot button. Additionally, attribute of "class" which is named "chatbot-container" is used as a reference when using css to style this component -->
+        <button class="chatbot-button"><a href="http://127.0.0.1:5000/"> <img src="Assets/chat_icon.png"></a></button></button> <!--Using "<button>" tag to add a button which will be used for opening the chatbot, which is stored in flask localhost of "127.0.0.1:5000" once the button has been clicked, "<img>" is stored inside the button tag which will be a chat icon ("src="Assets/chat_icon.png"")-->
+    </div> <!--Close the div tag-->
+    <!---------------------------------------------------------------------------------------------->
+
+    <!--------------------------------------CREATING AN ACCOUNT PAGE----------------------------------------------------------------->
+    <!--To develop an account page 1 div parants componants (which was used to create a overall account container that holds contents in account page) and 2 child component (1 adds logout link and heading) (1 includes a another child div component which adds all the save jobs once 
+    "SAVE" button has been pressed.)-->
+    <div class="account_container" id="account_container">
+        <div class="link">
+            <a href="0.2_login_page.html">Log Out</a> <br></br>
+            <h1>Your Saved Jobs</h1>
+        </div>
+        <br></br>
+        <div class="saved-jobs-container">
+            <div class="save-jobs" id="save-jobs"></div>
+        </div>
+    </div>
+    <br></br>
+
+    <!------------------------------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------FOOTER------------------------------------------------------------------------->
+    <div class="footer-container"> <!--Using "<div>" tag to add a component of footer, this holds all elements that will be included in the footer  (footer). Additionally, attribute of "class" which is named "footer-container" is used as a reference when using css to style this component -->
+        <footer> <!--Using "<footer>" tag to insert footer of the webpage, this will hold all footer elements-->
+            <img src="Assets/rave_wbl_logo_v2.png" alt="Rave WBL Logo"> <!--Using "<img>" tag to insert aws logo of Rave WBL (src="Assets/rave_wbl_logo.png"). Additionally, "alt" attribute is used to add image name -->
+            <p>Copyright &copy; Rave WBL All Rights Reserved</p> <!--Using "<p>" tag to insert a text within the footer which will state the copy right, it uses "&copy" which inserts  "©"-->
+        </footer>  <!--Close footer tag-->
+    </div>  <!--Close div tag-->
+    <!------------------------------------------------------------------------------------------------------------------------->
+
+
+    <!----------------------------------------USING <SCRIPT> TAG TO ADD A JAVASCRIPT DOCUMENT TO DEAL WITH ACCOUNT PAGE------------------------------------------>
+        
+    <!--Inside the javascript document it includes a asynchronous function (adding tasks whilst system is running) which adds a dynamic container in the div component "save-jobs" where once
+    student has saved the job they are interested in, it will use an HTML propoerty innerHTML which deals with making the system dynamic, by doing this it adds a HTML elements within a JavaScript 
+    and it uses "${}" to integrated data by the response by the backend server (8080) which has been extracted by client side server. It uses a DOM (Document Object Model) method "createElement" to 
+    create a div method which stores list of job vacancy once it has been saved. Additionally, it creates a save button where it uses "querySelector" (Used to select first CSS selector with the name of 
+    "deleteBtn") to get the button  "deletebtn" where event listener has been performed, where once student delete the job, the it will use ".getAttribute" attribute of data id, where once student presses the 
+    "DELTE" button it uses an "data-id" attribute to get the name of the job that it is being deleted. What happens is when "DELETE" button has been pressed, job name will be added in data id. It then adds it to the 
+    attribute "getAttribute" which is stored in the URL link when sending it to the backend where backend will retrive the job name students wants to delete and finds it in the collection  name that is stored in mongodb database
+    and once it has been found it then removes it removes the document from the collection.  -->
+    <script>
+
+        //--------------CREATING FUNCTION FOR ACCOUNT HANDLING---------------------------------
+        // I have used asynchronous function (performing tasks whilst page is being used) where i added a dynamic container which stores
+        // saved jobs by using innerHTML HTML property. Once student has clicked "SAVED" in jobs they are interested in then it will store
+        // the saved jobs in the collection. Request has been made to the backend (8080) where it gets student 
+        // saved jobs which is inputed in the collection in MongoDb database server. After receiving the response from the 
+        // backend, it converts it to json  where client side extracts the data and integrate to make the value, which uses "innerHTML
+        // In each container "DELETE" and "READ DESCRIPTION" button has been added.//
+        async function studentAccount(){
+            try{
+                const getStudentJobInterest = await fetch("http://localhost:8080/job-interest")
+                const studentJobInterest = await getStudentJobInterest.json();
+                const jobInterestContainer = document.getElementById("save-jobs")
+                console.log("Database has been received", studentAccount)
+
+                studentJobInterest.forEach(jobInterestItem => {
+                    const saveJobList = document.createElement('div')
+                    saveJobList.classList.add("save-jobs")
+
+                    saveJobList.innerHTML = `
+                        <h1 style="font-size: 32;">${jobInterestItem.Job_Name}</h1>
+                        <h2 style="color: #938484; font-size: 24;">${jobInterestItem.Industry_Name}</h2> 
+                        <h2 style="color: #D27E7E; font-size: 24;">${jobInterestItem.Job_Type}</h2> 
+                        <h2 style="color: #604F4F; font-size: 24;">${jobInterestItem.Project_Type}</h2> 
+                        <a href="1.5_student_portal_dynamic_job_description.html?Job_Name=${encodeURIComponent(jobInterestItem.Job_Name)}&Industry_Name=${encodeURIComponent(jobInterestItem.Industry_Name)}&Job_Type=${encodeURIComponent(jobInterestItem.Job_Type)}&Project_Type=${encodeURIComponent(jobInterestItem.Project_Type)}"><button class="read-info-btn">READ DESCRIPTION</button></a>
+                        <button type="button" class="deleteBtn" data-id="${encodeURIComponent(jobInterestItem.Job_Name)}">DELETE</button>
+                        <br></br>
+                    `
+
+                    
+                    jobInterestContainer.appendChild(saveJobList)
+                //---------------------------------------------------------------------------------------------------
+
+
+                //-------------------------ADDING EVENT IN "DELETE" button---------------------------------------------
+                //it creates a delete button where it uses "querySelector" (Used to select first CSS selector with the name of "deleteBtn") 
+                // to get the button  "deletebtn" where event listener has been performed, where once student delete the saved job, the it will use ".getAttribute" attribute of data id, where once student presses the 
+                // "DELTE" button it uses an "data-id" attribute to get the name of the job that it is being deleted. What happens is when "DELETE" button has been pressed, job name will be added in data id. It then adds it to the  
+                // getAttribute" which is stored in the URL link when sending it to the backend where backend will retrive the job name student wants to delete and finds it in the collection  name that is stored in mongodb database 
+                // has been found it then removes it removes the document from the collection.
+                    const removeButton = saveJobList.querySelector(".deleteBtn")
+                    removeButton.addEventListener('click', async function(){                                
+                        saveJobList.remove()
+                        let Job_Name = removeButton.getAttribute("data-id")
+
+                        try{
+                            const deleteSaveJob = await fetch(`http://localhost:8080/job-interest/${Job_Name}`, {
+                                method: 'DELETE'
+                            })
+                            const response = deleteSaveJob.json()
+
+                            if(deleteSaveJob.ok){
+                                alert(`${Job_Name} has been removed from the list`)
+                            } else {
+                                alert("There was an error deleting the job post")
+                            }
+                        } catch(err){
+                            console.log(err)
+                        }
+                    })
+                    
+                })
+
+                //-----------------------------------------------------------------------------------------------------
+                
+
+            }catch(err){
+                console.log(err)
+            }
+            
+
+        }
+
+        window.onload = studentAccount;
+    </script>
+<!----------------------------------------------------------------------------------------------------------->
+</body>
+
+</html>

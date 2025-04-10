@@ -1,0 +1,182 @@
+<!--------------------------------------------------------------------------STARTING OFF HTML DOCUMENT------------------------------------------------------------->
+<!--Before developing in HTML, i am setting up a document by adding the styles that will be used to make the page user friendly and intuitive  and it additionally adds a 
+bootstrap API which is used to make some of the website dynamic which is based on the class name that has been inserted in each containers. This way it saves time for developers
+to style all the component or elements to make the web page user friendly (<link>). Additionally it uses <meta> tag to set up the view point of the screen which is crucial to make 
+the system available to different screen size like phones, tablets, desktop (making it responsive). Additionally it uses <meta> tag to insert a UTF (Unicode Transform Unit)-8 which adds 
+different type of special characters and special symbols in the website  -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ADMIN PORTAL HOMEPAGE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/account.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/admin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
+
+</head>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+<body>
+       <!---------------------------------HEADER----------------------------------------------------->
+    <nav class="navigationBoxContainer"> <!--Using "<nav> to add a navigation box, additionally it has a attribute of "class" which is name "navigationBoxContainer" is used as a reference when using css to style this component-->
+        <a href="3.0_admin.html"><img src="Assets/rave_wbl_logo_v2.png" class="rave-wbl-logo"></a> <!--Using "<a>" tag to link to html document of "3.0_admin.html" by using attribute of "href", once the students clicks in the Rave WBL logo which is stored in "<img>" ("src="Assets/rave_wbl_logo_v2.png" (directory in where the image is stored)). Additionally, adding "alt" attribute to insert the name of the image-->
+        <a href="3.0_admin.html" class="links">Admin</a> <!--Using "<a>" tag to link to html document of "3.0_admin.html" by using attribute of "href", once the students clicks in the nav link "Admin"-->
+        <a href="3.1_admin_job_portal.html" class="links">Jobs Portal</a> <!--Using "<a>" tag to link to html document of "3.1_admin_job_portal.html" by using attribute of "href", once the students clicks in the nav link "Job Portal"-->
+        <a href="3.2_admin_student_progressl.html" class="links">Student Progress</a> <!--Using "<a>" tag to link to html document of "3.2_admin_student_progressl.html" by using attribute of "href", once the students clicks in the nav link "Student Progress"-->
+        <a href="3.0_admin.html"><img src="Assets/account_icon.png" class="accountIcon"></a> <!--Using "<a>" tag to link to html document of "3.0_admin.html" by using attribute of "href", once the students clicks in the account icon which is stored in "<img>" ("src="Assets/account_icon.png"  (directory in where the image is stored)).Additionally, adding "alt" attribute to insert the name of the image-->
+    </nav>  <!--Close the nav tag-->
+        <!-------------------------------------------------------------------------------------------->
+
+
+    <br></br>
+    <!--------------------------------------------------------------------------ADDING STUDENT APPLICATION FORM------------------------------------------------------------->
+    <!--I have included 2 parants div components where 1 div component focuses in inserting logout link which is stored in <a> tag and another div comonent is where student application form will be inputed once students
+        has applied to the job, where it uses <script> tag to add dynamics to this container-->
+    <div class="link">
+        <a href="0.2_login_page.html">Log Out</a> <br></br>
+        <h1>STUDENT APPLICATION FORM</h1>
+        <br></br>
+    </div>
+
+   <div class="admin-container" id="admin-container"></div>
+   <!--------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+    
+
+    <br></br>
+     <!------------------------------------------------FOOTER------------------------------------------------------------------------->
+     <div class="footer-container"> <!--Using "<div>" tag to add a component of footer, this holds all elements that will be included in the footer  (footer). Additionally, attribute of "class" which is named "footer-container" is used as a reference when using css to style this component -->
+        <footer> <!--Using "<footer>" tag to insert footer of the webpage, this will hold all footer elements-->
+            <img src="Assets/rave_wbl_logo_v2.png" alt="Rave WBL Logo"> <!--Using "<img>" tag to insert aws logo of Rave WBL (src="Assets/rave_wbl_logo.png"). Additionally, "alt" attribute is used to add image name -->
+            <p>Copyright &copy; Rave WBL All Rights Reserved</p> <!--Using "<p>" tag to insert a text within the footer which will state the copy right, it uses "&copy" which inserts  "©"-->
+        </footer>  <!--Close footer tag-->
+    </div>  <!--Close div tag-->
+    <!------------------------------------------------------------------------------------------------------------------------->
+
+
+    <!------------------------------------------------ADDING DYNAMICS TO DIV CONTAINER THAT STORES STUDENT APPLICATION FORM------------------------------------------------------------------------->
+
+    <!--I have used <script> tag to insert a javascript within a HTML document where it sends a request to the backend (localhost 8080) which gets student application form and converts backend response to JSON which will be 
+        used to integrate the value (found in the database) in the div container ("admin-container") which will create a element that stores students application form detail and a "ACCEPT and "DECLINE" button where event listener 
+        is added in these button once it has been clicked which updates the status value to either "Accept" or "Decline" based on what button admin has pressed. It uses "data-id" attribute  to set the value to "Accept" once "Accept"
+        button has been clicked and "Decline" button has been clicked. It then sends the status value to the backend where the backend will update the field name of "Status" to either "Accept" or "Decline" -->
+    <script>
+        //------------------------------------------FUNCTION FOR ADDING DYNAMIC STUDENT PROGRESS TABLE------------------------------------- 
+        // I have used asynchronous function (performing tasks whilst page is being used) where i added a dynamic table by using 
+        // innerHTML HTML property. Once student has applied for the job (submits their application form) it integrates it to the 
+        // the admin page. By doing this request has been made to the backend (8080) where it gets student 
+        // application form which is inputed in the collection in MongoDb database server. After receiving the response from the 
+        // backend, it converts it to json  where client side extracts the data and integrate to make the value, which uses "innerHTML//
+        async function studentApplicationForm(){
+            let Status = null
+            const getStudentApplicationForm = await fetch("http://localhost:8080/get-student-progress")
+            const studentApplicationFormData = await getStudentApplicationForm.json()
+
+            const adminContainer = document.getElementById("admin-container")
+
+            studentApplicationFormData.forEach(form => {
+                const applicationFormDetail = document.createElement('div')
+                applicationFormDetail.innerHTML = `
+                    <div class="info-container">
+                        <span><h1>${form.First_Name}</h1> <h1>${form.Last_Name}</h1></span>
+                        <span><b>Student ID:</b><p>${form.Student_id}</p></span>
+                        <span><b>Company:</b><p>${form.Industry_Name}</p></span>
+                        <span><b>Job Type:</b><p>${form.Job_Type}</p></span>
+                        <span><b>Project Type:</b><p>${form.Project_Type}</p></span>
+                        <span><b>Email Address:</b><p>${form.Student_Email}</p></span>
+                        <span><b>Course:</b><p>${form.Course}</p></span>
+                        <span><b>Gender:</b><p>${form.Gender}</p></span>
+                        <span><b>Avalability:</b><p>${form.Avalability}</p></span>
+                        <span><b>Skills:</b><p>${form.Skills}</p></span></span>
+                        <span><b>Experiences:</b><p>${form.Experience_Name}</p></span>
+                        <span><b>Certifications:</b><p>${form.Name_of_certification}</p></span>
+                        <span><b>Document:</b><a href="${form.Document}" target="_blank">View File</a></span><br></br>
+                        <a href="${form.Link}">Student Profile</a></span>
+                        <br></br>
+                        <span><button type="button" class="acceptButton" data-id="${form.Student_id}">Accept</button> <button type="button" class="declineButton" data-id="${form.Student_id}">Decline</button></span> 
+                `
+                adminContainer.appendChild(applicationFormDetail)
+            })
+            //-----------------------------------------------------------------------------------------------------------------------------------
+                
+                //-------------------------ADDING AN EVENT ONCE ACCEPT BUTTON HAS BEEN PRESSED---------------------------------------------
+                ///It uses "querySelectorAll" to select elements with "acceptButton" (<button> tag elements) where once "ACCEPT" button is pressed it
+                //  uses "data-id" attribute  to set the value to "Decline".It then sends the status value to the backend where the backend will update the field name of "Status" to "Accept"///
+                document.querySelectorAll(".acceptButton").forEach(acceptBtn => {
+                    acceptBtn.addEventListener("click", async function(event){
+                        try{
+                            console.log("Button is clicked")
+                            const Student_id = this.getAttribute("data-id")
+                            Status = "Accepted"
+
+                            const sendSuccessStatus = await fetch(`http://localhost:8080/get-student-progress/${Student_id}/${Status}`, {
+                                method: 'POST',
+                                headers: {"Content-Type": "application/json"},
+                                body: JSON.stringify({Status})
+
+                            })
+
+                            const response = await sendSuccessStatus.json()
+
+
+                            if(sendSuccessStatus.ok){
+                                alert("You have decided to accept this")
+                                return;
+                            }
+                        }catch(err){
+                            console.log(err)
+                        }
+                    })
+
+                })
+                //----------------------------------------------------------------------------------------------------------------------------
+
+                //-------------------------ADDING AN EVENT ONCE DECLINE BUTTON HAS BEEN PRESSED---------------------------------------------
+                ///It uses "querySelectorAll" to select elements with "declineButton" (<button> tag elements) where once "DECLINE" button is pressed it
+                //  uses "data-id" attribute  to set the value to "Decline".It then sends the status value to the backend where the backend will update the field name of "Status" to "Decline"///
+                document.querySelectorAll(".declineButton").forEach(declineBtn => {
+                    declineBtn.addEventListener("click", async function(event){
+                        try{
+                            event.preventDefault()
+                            console.log("Button is clicked")
+                            const Student_id = this.getAttribute("data-id")
+                            Status = "Declined"
+
+                            const sendFailStatus = await fetch(`http://localhost:8080/get-student-progress/${Student_id}/${Status}`, {
+                                method: 'POST',
+                                headers: {"Content-Type": "application/json"},
+                                body: JSON.stringify({Status})
+
+                            })
+
+                            const response = await sendFailStatus.json()
+
+                            if(sendFailStatus.ok){
+                                alert("You have decided to decline this")
+                            }
+                        }catch(err){
+                            console.log(err)
+                        }
+                    })
+                    //----------------------------------------------------------------------------------------------------------------------------
+
+                })
+
+            
+        }
+
+        window.onload = studentApplicationForm;
+    </script>
+    <!---------------------------------------------------------------------------------------------------------------------------------------->
+</body>
+</html>

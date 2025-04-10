@@ -1,0 +1,90 @@
+.searchAndFilterBox { /*The class name in div ("searchAndFilterBox")*/
+    position: relative; /*Setting "postion" of relative which moves the elements by given pixels by using "top" and "left" method*/
+    top: 30px; /*Moving the text to top by 30 pixels */
+    left: 10px; /*Moving the text to left by 10 pixels */
+}
+
+.searchBox { /*The class name in div ("searchBox")*/
+    position: relative; /*Setting "postion" of relative which moves the elements by given pixels by using "top" and "left" method*/
+    display: block;  /*Using block method in "display" which adds block to the input tag, where it makes it easier for the element to align to the center of the page */
+    margin: 0 auto; /*Setting "margin" by 0 (margin is not added in the element by top and bottom) and "auto" (automatically margins the elements to left and right) */
+    width: 804px; /*Setting the width of 804 pixels*/
+    height: 89px; /*Setting the height of 89 pixels*/
+    top: -50px; /*Moving the text to top by -50 pixels */
+    border: 1px solid black; /*Adding border of 1 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 30px; /*Adding "border-radius" of 30 pixels which means that it makes the corner curved by 30 pixels  */
+    color: #000; /*Setting the text colour of gray*/
+    font-size: 40px; /*Setting the "font size" of 40 pixels*/
+    text-align: center; /*Setting text to center by using "text-align" method */
+    box-shadow: 3px 3px 3px 3px black; /*Adding shadows around the search box by 3pixels (top, bottom, right and left) where the colour of the shadow is black */
+}
+
+.searchBox input[placeholder]{ /*The class name in div ("student-login-input") which style input tag for input type of placeholder*/
+    text-align: center; /*Setting text to center by using "text-align" class */
+    font-size: 32px; /*Setting "font-size" of 32 pixels */
+}
+
+
+.filter { /*The class name in div ("filter")*/
+    position: relative; /*Setting "postion" of relative which moves the elements by given pixels by using "top" and "left" method*/
+    width: 194px; /*Setting the width of 194 pixels*/
+    height: 70px; /*Setting the height of 70 pixels*/
+    border: 1px solid black; /*Adding border of 1 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 30px; /*Adding "border-radius" of 30 pixels which means that it makes the corner curved by 30 pixels  */
+    font-weight: bold; /*Setting the text to bold by using "font-weight" method*/
+    font-size: 18px; /*Setting the "font size" of 18 pixels*/
+    top: -30px; /*Moving the text to top by -30 pixels */
+    left: 430px; /*Moving the text to left by 430 pixels */
+    text-align: center; /*Setting text to center by using "text-align" method */
+    background-color: #d4d2d0; /*Setting the text colour of gray*/
+}
+
+.job-vacancy-container { /*The class name in div ("job-vacancy-container")*/
+    display: grid;  /*Using grid method in "display" which adds grids to the elements  within the div tag in, which is used to organise the container in coloumns */
+    grid-template-columns: repeat(3, 3fr); /*Adding "grid-template-columns" to lay out the elements in columns where 3 containers are added in 1 space before moving to next line of the page and each coloumns gets 1 equal space ("repeat(3, 1fr)", whee fr stands for "fraction"*/
+    padding: 10px; /*Setting "padding" by 10 pixels which means adding spaces within the container which adds gaps between elements*/ 
+    gap: 130px 10px; /*Seeting the gaps by 130 pixels by rows and 10 pixels by coloumsn */ 
+}
+
+.job-container img { /*The class name in div ("job-container") which styles img tag*/
+    width: 183px; /*Setting the width of 183 pixels*/
+    height: 118px; /*Setting the height of 118 pixels*/
+}
+
+.description-button { /*The class name in div ("description-button") */
+    background-color: #1500FF; /*Setting the background colour of blue*/
+    color: #ffffff; /*Setting the text colour of white*/
+    font-weight: bold; /*Setting the text to bold by using "font-weight" method*/
+    border: 5px solid black; /*Adding border of 5 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 10px; /*Adding "border-radius" of 10 pixels which means that it makes the corner curved by 10 pixels  */
+    width: 156px; /*Setting the width of 156 pixels*/
+    height: 112px; /*Setting the height of 112 pixels*/
+}
+
+.description-button:hover { /*The class name in button tag ("description-button") which styles button once mouse is hovering to the button */
+    background-color: #ffffff; /*Setting the background colour of white*/
+    color: #1500FF;/*Setting the text colour of blue*/
+    cursor: pointer; /*Adding a pointer to the cursor once it has been landed to the "SUBMIT" button*/
+}
+
+
+@media screen and (max-width: 780px) { /*By using @media (media query) screen, to add responsiveness in Rave WBL homepage, where once the max width of the screen size is 780 pixels then the elements that is defined in this function will be responsive. 780 pixels is best screen size for mobile and phone, which is why this has been set */
+
+    .searchBox{ /*The class name in div ("searchBox")*/
+        width: fit-content; /*Setting "width" to fit-content which means once screen is adjusted, the width of the input box will also be adjusted*/
+    }
+    .filter{ /*The class name in div ("filter")*/
+        width: fit-content; /*Setting "width" to fit-content which means once screen is adjusted, the width of the input box will also be adjusted*/
+        left: 170px; /*Moving the text to left by 170 pixels */
+    }
+
+    .job-vacancy-container { /*The class name in div ("job-vacancy-container")*/
+        display: grid; /*Using grid method in "display" which adds grids to the elements  within the div tag in, which is used to organise the container in coloumns */
+        grid-template-columns: repeat(1, 3fr); /*Adding "grid-template-columns" to lay out the elements in columns where 1 containers are added in 1 space before moving to next line of the page and each coloumns gets 3 equal space ("repeat(1, 3fr)", whee fr stands for "fraction"*/
+        padding: 10px; /*Setting "padding" by 10 pixels which means adding spaces within the container which adds gaps between elements*/ 
+        gap: 130px 10px; /*Seeting the gaps by 130 pixels by rows and 10 pixels by coloumsn */ 
+    }
+    
+    
+    
+    }

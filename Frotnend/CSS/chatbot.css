@@ -1,0 +1,16 @@
+.chatbot-container img { /*The class name in div ("chatbot-container") which styles  img tag*/
+    width: 79px; /*Setting the width to 79 pixels  */
+    height: 79px; /*Setting the height to 79 pixels  */
+}
+
+.chatbot-button { /*The class name in div ("chatbot-button") which styles button tag */
+    position: fixed; /*Setting "postion" to fixted which means that element will stick in the same position once page is being scrolled*/
+    background-color: #00BFFF; /*Setting the background colour to  light blue */
+    border: 10px solid black; /*Adding border of 10 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 50%; /*Setting the border radius to "50%" which means that it turns the image tag to circular, which is a best shape to have once inserting chatbot icon */
+    width: 136px; /*Setting the width to 136 pixels  */
+    height: 122px; /*Setting the height to 122 pixels  */
+    bottom: 10px; /*Moving the element to bottom with 10 pixels*/
+    right: 10px; /*Moving the element to right with 10 pixels*/
+    cursor: pointer; /*Adding a pointer to the cursor once it has been landed to the "ADD" button*/
+}

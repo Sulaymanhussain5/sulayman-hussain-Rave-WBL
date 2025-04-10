@@ -1,0 +1,10 @@
+* { /*Styles all the elements in the page, which is used by universal selector ("*")*/
+    box-sizing: border-box; /*Setting "box-sizing" to border-box which adds the padding and margin to the elements*/
+    margin: 0; /*Removes the margin in the browser, which is set to 0*/
+    padding: 0; /*Removes the padding in the browser, which is set to 0*/
+}
+
+body { /*Styles all the elements in the body tag*/
+    position: relative; /*Setting "position" to relative which enables the page to add elements in to different postion if it was to be added*/
+    min-height: 100%; /*Setting "min-height" to 100% which means that the height of the web page increases once elements are added*/
+}

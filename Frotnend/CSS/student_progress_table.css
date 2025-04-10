@@ -1,0 +1,51 @@
+.student-progress-table-container input{ /*The class name in div ("student-progress-table-container") which styles the input tag*/
+    display: block; /*Using block method in "display" which adds block to the input tag, where it makes it easier for the element to align to the center of the page */
+    margin: 0 auto; /*Setting "margin" by 0 (margin is not added in the element by top and bottom) and "auto" (automatically margins the elements to left and right) */
+    width: 804px; /*Setting the width of 804 pixels*/
+    height: 89px; /*Setting the height of 89 pixels*/
+    border: 1px solid black; /*Adding border of 1 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 30px; /*Adding "border-radius" of 30 pixels which means that it makes the corner curved by 30 pixels  */
+    color: #807979; /*Setting the text colour of gray*/
+    font-size: 40px; /*Setting the "font size" of 40 pixels*/
+    text-align: center; /*Setting text to center by using "text-align" method */
+    box-shadow: 3px 3px 3px 3px black; /*Adding shadows around the search box by 3pixels (top, bottom, right and left) where the colour of the shadow is black */
+}
+
+.student-progress-table th{ /*The class name in table ("student-progress-table") which styles the th(table heading) tag*/
+    background-color: aqua; /*Setting the background colour of aqua*/
+    padding: 10px; /*Setting "padding" by 10 pixels which means adding spaces within the container which adds gaps between elements*/ 
+
+}
+
+tr:nth-child(even){ /*Styling tr(table row) tag, where background colour of light gray will apply to the row once the number of rows is even number ("nth-child(even)")*/
+    background-color: #f2f2f2; /*Setting the background colour of light gray*/
+}
+
+.student-progress-table td{ /*The class name in table ("student-progress-table") which styles the td(table data) tag*/
+    border: 1px solid; /*Adding border of 1 pixels around the elements  with solid type*/
+}
+
+@media screen and (max-width: 780px) { /*By using @media (media query) screen, to add responsiveness in Rave WBL homepage, where once the max width of the screen size is 780 pixels then the elements that is defined in this function will be responsive. 780 pixels is best screen size for mobile and phone, which is why this has been set */
+    .student-progress-table-container{ /*The class name in div ("student-progress-table-container")*/
+        width: fit-content; /*Setting "width" to fit-content which means once screen is adjusted, the width of the input box will also be adjusted*/
+    }
+
+    .student-progress-table-container th{ /*The class name in div ("student-progress-table-container") which styles th(table heading)*/
+        width: fit-content; /*Setting "width" to fit-content which means once screen is adjusted, the width of the input box will also be adjusted*/
+    }
+
+    .student-progress-table-container td{ /*The class name in div ("student-progress-table-container") which styles the td(table data) tag*/
+        width: fit-content; /*Setting "width" to fit-content which means once screen is adjusted, the width of the input box will also be adjusted*/
+    }
+
+    .student-progress-table-container input{ /*The class name in div ("student-progress-table-container") which styles the input tag*/
+        width: fit-content; /*Setting "width" to fit-content which means once screen is adjusted, the width of the input box will also be adjusted*/
+        position: relative; /*Setting "postion" of relative which moves the elements by given pixels by using "top" and "left" method*/
+        left: -300px; /*Moving the text to left by -300 pixels which means that it is going by left side of the page*/
+    }
+    
+}
+
+
+
+

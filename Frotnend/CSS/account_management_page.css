@@ -1,0 +1,146 @@
+.management_container form { /*The class name in div ("management_container") which styles  form tag*/
+    display: grid; /*Using grid method in "display" which adds grids to the elements  within the form tag in, which is used to organise the container in coloumns */
+    grid-template-columns: repeat(3, 1fr); /*Adding "grid-template-columns" to lay out the elements in columns where 3 containers are added in 1 space before moving to next line of the page and each coloumns gets 1 equal space ("repeat(3, 1fr)", whee fr stands for "fraction"*/
+    gap: 50px; /*Adding "gap" of 50 pixels in adding space when adding container in the new line*/
+}
+
+.skills-field {/*The class name in div ("skills-field") */
+    border: 10px solid black; /*Adding border of 10 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 10px; /*Adding "border-radius" of 10 pixels which means that it makes the corner curved by 10 pixels  */
+    height: auto; /*Height is automatically adjusted based on the content that is being added in the container */
+}
+
+.skills-field input { /*The class name in div ("skills-field") which styles input tag */ 
+    border: 1px solid black; /*Adding border of 1 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    width: 300px; /*Setting the width to 300 pixels  */
+    height: 30px;  /*Setting the Height to 30 pixels  */
+}
+
+.skills-field button{ /*The class name in div ("skills-field") which styles button tag */ 
+    background-color: #0000ff; /*Setting the background colour to  blue */
+    color: white; /*Setting the  text colour to  white */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    cursor: pointer; /*Adding a pointer to the cursor once it has been landed to the "ADD" button*/
+    width: 72px; /*Setting the width to 72 pixels  */
+    height: 42px; /*Setting the height to 42 pixels  */
+}
+
+.skills-field button:hover{ /*The class name in div ("skills-field") which styles button once mouse is hovering to the button */ 
+    background-color: white; /*Setting the background colour to  white */
+    color: blue; /*Setting the  text colour to  blue */
+}
+
+.personal-statement-field { /*The class name in div ("personal-statement-field")  */ 
+    border: 10px solid black; /*Adding border of 10 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 10px; /*Adding "border-radius" of 10 pixels which means that it makes the corner curved by 10 pixels  */
+    height: auto; /*Height is automatically adjusted based on the content that is being added in the container */
+}
+
+.personal-statement-field input { /*The class name in div ("personal-statement-field") which styles input tag  */ 
+    border: 1px solid black; /*Adding border of 1 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    width: 330px; /*Setting the width to 330 pixels  */
+    height: 30px; /*Setting the Height to 30 pixels  */
+}
+
+
+
+.avalability-field { /*The class name in div ("avalability-field")  */
+    border: 10px solid black; /*Adding border of 10 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 10px; /*Adding "border-radius" of 10 pixels which means that it makes the corner curved by 10 pixels  */
+    height: auto; /*Height is automatically adjusted based on the content that is being added in the container */
+}
+
+.avalability-field input { /*The class name in div ("avalability-field") which styles input tag  */ 
+    border: 1px solid black; /*Adding border of 1 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    width: 300px; /*Setting the width to 300 pixels  */
+    height: 30px; /*Setting the Height to 30 pixels  */
+}
+
+.avalability-field button{ /*The class name in div ("avalability-field") which styles button tag */ 
+    background-color: blue; /*Setting the background colour to  blue */
+    color: white; /*Setting the  text colour to  white */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    cursor: pointer; /*Adding a pointer to the cursor once it has been landed to the "ADD" button*/
+    width: 72px; /*Setting the width to 72 pixels  */
+    height: 42px; /*Setting the height to 42 pixels  */
+}
+
+.avalability-field button:hover{ /*The class name in div ("avalability-field") which styles button once mouse is hovering to the button */
+    background-color: white; /*Setting the background colour to  white */
+    color: blue; /*Setting the  text colour to  blue */
+}
+
+
+.certification-field { /*The class name in div ("certification-field")  */
+    border: 10px solid black; /*Adding border of 10 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 10px; /*Adding "border-radius" of 10 pixels which means that it makes the corner curved by 10 pixels  */
+    height: auto; /*Height is automatically adjusted based on the content that is being added in the container */
+}
+
+.certification-field input { /*The class name in div ("avalability-field") which styles input tag  */ 
+    border: 1px solid black; /*Adding border of 1 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    width: 300px; /*Setting the width to 300 pixels  */
+    height: 30px; /*Setting the height to 30 pixels  */
+}
+
+.certification-field button{ /*The class name in div ("certification-field") which styles button tag */ 
+    background-color: blue; /*Setting the background colour to  blue */
+    color: white; /*Setting the  text colour to  white */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    cursor: pointer; /*Adding a pointer to the cursor once it has been landed to the "ADD" button*/
+    width: 72px; /*Setting the width to 72 pixels  */
+    height: 42px; /*Setting the height to 30 pixels  */
+}
+
+.certification-field button:hover{ /*The class name in div ("certification-field") which styles button once mouse is hovering to the button */
+    background-color: white; /*Setting the background colour to  white */
+    color: blue; /*Setting the  text colour to  blue */
+}
+
+
+.experience-field { /*The class name in div ("experience-field")  */
+    border: 10px solid black; /*Adding border of 10 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 10px; /*Adding "border-radius" of 10 pixels which means that it makes the corner curved by 10 pixels  */
+    height: auto;  /*Height is automatically adjusted based on the content that is being added in the container */
+}
+
+.experience-field input { /*The class name in div ("experience-field") which styles input tag  */ 
+    border: 1px solid black; /*Adding border of 1 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    width: 300px; /*Setting the width to 300 pixels  */
+    height: 30px; /*Setting the height to 30 pixels  */
+}
+
+.experience-field button{ /*The class name in div ("experience-field") which styles button tag */ 
+    background-color: blue; /*Setting the background colour to  blue */
+    color: white; /*Setting the  text colour to  white */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    cursor: pointer; /*Adding a pointer to the cursor once it has been landed to the "ADD" button*/
+    width: 72px; /*Setting the width to 72 pixels  */
+    height: 42px; /*Setting the height to 42 pixels  */
+}
+
+.experience-field button:hover{ /*The class name in div ("experience-field") which styles button once mouse is hovering to the button */
+    background-color: white; /*Setting the background colour to  white */
+    color: blue; /*Setting the  text colour to  blue */
+}
+
+.document-field { /*The class name in div ("document-field")  */
+    border: 10px solid black; /*Adding border of 10 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 10px;/*Adding "border-radius" of 10 pixels which means that it makes the corner curved by 10 pixels  */
+    height: auto; /*Height is automatically adjusted based on the content that is being added in the container */
+}
+
+
+
+@media screen and (max-width: 780px) { /*By using @media (media query) screen, to add responsiveness account management form, where once the max width of the screen size is 780 pixels then the elements that is defined in this function will be responsive. 780 pixels is best screen size for mobile and phone, which is why this has been set */
+    .management_container form{ /*The class name in div ("management_container") which styles  form tag to make it responsive*/
+        display: grid; /*Using grid method in "display" which adds grids to the elements  within the form tag in, which is used to organise the container in coloumns */
+        grid-template-columns: repeat(1, 1fr); /*Adding "grid-template-columns" to lay out the elements in columns where 1 containers are added in 1 space before moving to next line of the page and each coloumns gets 1 equal space ("repeat(3, 1fr)", whee fr stands for "fraction"*/
+        gap: 50px; /*Adding "gap" of 50 pixels in adding space when adding container in the new line*/
+    }
+}

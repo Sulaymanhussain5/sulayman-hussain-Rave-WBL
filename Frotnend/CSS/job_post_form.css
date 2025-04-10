@@ -1,0 +1,70 @@
+p { /*Styling the <p> tag*/
+    text-align: center; /*Setting "text-align" to center (middle) where it positions the text in the middle of the page*/
+    font-size: 30px; /*Sertting the "font-size" by 30 pixels*/
+}
+
+.job-post-form-container { /*The class name in div ("job-post-form-container")*/
+    display: grid; /*Using grid method in "display" which adds grids to the elements  within the form tag in, which is used to organise the container in coloumns */
+    place-items: center; /*Adding "place-items" of center, which alligns the contents within the div elements to center of the page*/
+    border: 10px solid black; /*Adding border of 10 pixels around the elements  with solid type which is coloured as black  */
+    width: 60%; /*Setting the width to 60%   */
+    padding: 20px; /*Setting padding to 20 pixels which adds spaces within the container to avoide tags or contents joined up together*/
+    margin: auto; /*Setting "margin" to auto which means that it automatically makes the space in left and right hand side of the element equal */
+}
+
+.submit {/*The class name in button tag ("submit")*/
+    display: block; /*Using block method in "display" which adds block to the button tag, where it makes it easier for the element to align to the center of the page */
+    margin: 0 auto; /*Setting "margin" by 0 (margin is not added in the element by top and bottom) and "auto" (automatically margins the elements to left and right) */
+    background-color: blue; /*Setting the background colour of  blue*/
+    color: #ffff; /*Setting the text colour of  white*/
+    border: 10px solid black; /*Adding border of 10 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 10px; /*Adding "border-radius" of 10 pixels which means that it makes the corner curved by 10 pixels  */
+    width: 330px; /*Setting the width to 330 pixels */
+    height: 82px; /*Setting the height to 82px*/
+    cursor: pointer; /*Adding a pointer to the cursor once it has been landed to the "APPLY" button*/
+}
+
+.submit:hover { /*The class name in button tag ("submit") which styles button once mouse is hovering to the button */
+    color: blue; /*Setting the text colour of  blue*/
+    background-color: #ffff; /*Setting the background colour of  white*/
+}
+
+
+.job-post-form-container label { /*The class name in div ("job-post-form-container") which style the label tag*/
+    font-size: 22px; /*Setting the font size  of 22 pixels*/
+}
+
+.job-post input {  /*The class name in div ("job-post") which style the input tag*/
+    border: 1px solid black; /*Adding border of 1 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    width: 511px; /*Setting the width to 511 pixels */
+}
+
+.job-post button{ /*The class name in div ("job-post") which style the button tag*/
+    background-color: blue; /*Setting the background colour of  blue*/
+    color: white; /*Setting the text colour of  white*/
+    border-radius: 5px; /*Adding "border-radius" of 5 pixels which means that it makes the corner curved by 5 pixels  */
+    cursor: pointer; /*Adding a pointer to the cursor once it has been landed to the "SUBMIT" button*/
+    width: 82px; /*Setting the width to 82 pixels */
+    height: 42px; /*Setting the height to 42 pixels */
+}
+
+.job-post textarea{ /*The class name in div ("job-post") which style the textarea tag*/
+    width: 730px; /*Setting the width to 730 pixels */
+    height: 82px; /*Setting the height to 82 pixels */
+}
+
+
+
+@media screen and (max-width: 780px) { /*By using @media (media query) screen, to add responsiveness job post form and input box within the form, where once the max width of the screen size is 780 pixels then the elements that is defined in this function will be responsive. 780 pixels is best screen size for mobile and phone, which is why this has been set */
+    .job-post-form-container{ /*The class name in div ("job-post-form-container")*/
+        width: fit-content; /*Setting "width" to fit-content which means once screen is adjusted, the width of the input box will also be adjusted*/
+    }
+    .job-post input{ /*The class name in div ("job-post") which styles  input tag to make it responsive*/
+        width: fit-content; /*Setting "width" to fit-content which means once screen is adjusted, the width of the input box will also be adjusted*/
+    }
+    .job-post textarea{ /*The class name in div ("job-post") which styles  textarea tag to make it responsive*/
+        width: fit-content; /*Setting "width" to fit-content which means once screen is adjusted, the width of the input box will also be adjusted*/
+    }
+
+}

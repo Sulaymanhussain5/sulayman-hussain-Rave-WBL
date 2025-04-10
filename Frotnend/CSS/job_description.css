@@ -1,0 +1,41 @@
+.description { /*The class name in div ("description")*/
+    position: relative; /*Adding position of "relative" which allows the elements to be moved in to specific position based in the direction it has been given */
+    left: 350px; /*Moving the text to left by 350 pixels */
+    top: -130px; /*Moving the text to top by -130 which means that elements is moving on top */
+    padding: 10px; /*setting padding by 10 pixels which means that it is adding space in the container */
+    font-size: 32px; /*Setting "font size" of 32 pixels */
+}
+
+.apply-btn { /*The class name in button ("apply-btn")*/
+    display: block; /*Using block method in "display" which adds block to the button tag, where it makes it easier for the element to align to the center of the page */
+    margin: 0 auto; /*Setting "margin" by 0 (margin is not added in the element by top and bottom) and "auto" (automatically margins the elements to left and right) */
+    background-color: blue; /*Setting the background colour of  blue*/
+    color: #ffff; /*Setting the text colour of white*/
+    border: 10px solid black; /*Adding border of 10 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 10px; /*Adding "border-radius" of 10 pixels which means that it makes the corner curved by 10 pixels  */
+    width: 330px; /*Setting the width of 330 pixels*/
+    height: 82px; /*Setting the height of 82 pixels*/
+    cursor: pointer; /*Adding a pointer to the cursor once it has been landed to the "APPLY" button*/
+}
+
+.apply-btn:hover { /*The class name in button tag ("apply-btn") which styles button once mouse is hovering to the button */
+    background-color: #ffff; /*Setting the background colour of white*/
+    color: blue; /*Setting the text colour of blue*/
+}
+
+.save-btn{ /*The class name in button ("save-btn")*/
+    display: block; /*Using block method in "display" which adds block to the button tag, where it makes it easier for the element to align to the center of the page */
+    margin: 0 auto; /*Setting "margin" by 0 (margin is not added in the element by top and bottom) and "auto" (automatically margins the elements to left and right) */
+    background-color: blue; /*Setting the background colour of blue*/
+    color: #ffff; /*Setting the text colour of white*/
+    border: 10px solid black; /*Adding border of 10 pixels around the elements  with solid type which is coloured as black  */
+    border-radius: 10px; /*Adding "border-radius" of 10 pixels which means that it makes the corner curved by 10 pixels  */
+    width: 130px; /*Setting the width of 130 pixels*/
+    height: 82px; /*Setting the height of 82 pixels*/
+    cursor: pointer; /*Adding a pointer to the cursor once it has been landed to the "SAVE" button*/
+}
+
+.save-btn:hover { /*The class name in button tag ("save-btn") which styles button once mouse is hovering to the button */
+    background-color: #ffff; /*Setting the background colour of white*/
+    color: blue; /*Setting the text colour of blue*/
+}

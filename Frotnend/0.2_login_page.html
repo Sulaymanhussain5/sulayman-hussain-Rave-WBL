@@ -1,0 +1,198 @@
+<!DOCTYPE html> <!--Using "<!DOCTYPE>" tag  is used to  defines that this is a html documents-->
+<html> <!-- Using "<html>" tag is used  for  main tag that starts the html documents-->
+
+<head> <!--Using "<head>" tag is used to add stylesheet which will be supported in styling the header, footer, chatbot and overview of the website. Additionally it also contains the name of the tab of the website-->
+    <title>Rave WBL - Login Page</title> <!--Using "<title>" tag is used to define the name of the tab, which will be called "Rave WBL - Login Page"-->
+    <meta charset="UTF-8"> <!--Using "<meta>" tag with attribute of "charset" which deals with how should characters should be stored, by using the charset type of "UTF (Unicode Transform Unit)-8" this can store all special sybols and different languages-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Using meta tag with attribute of "name" which defines the name of the meta tag which will be "viewpoint" since it deals with making the system responsive to all devices where the "content="width=device-width" makes the webpage fit into all devices, without other elements getting squashed, and "initial-scale=1.0" sets the zoom level which will be 1.0 -->
+    <link rel="stylesheet" href="CSS/login.css"> <!--Using "<link>" tag to link the CSS document (using rel attribute of "stylesheet") to login.css which deals with the login design-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> <!--Using link tag to link to the bootstrap style sheet which includes list of CSS codes, this will be used to make the student / job portal  page look user friendly and responsivenesss."jsdelivr.net" within the link  means that sheet can be access via code, instead of downloading it. "integrity" is a security feature for the document which prevents from changes in stylesheet-->
+
+</head> <!--Close the head tag-->
+
+<body> <!--body tag is used to store all contents within the webpage-->
+    <img src="Assets/rave_wbl_logo_v2.png" width="200px" height="200px" alt="Rave WBL Logo" style="display: block; margin: auto;">
+    <div class="login-container"> <!--Using "<div> to add a login container that contains elements that creates a login form, which uses tag of <h1> (heading), <label> (field names) and <form> (login form)-->
+        <h1 style="text-align: center;">LOGIN</h1> <!--Using "<h1>" to add the page heading of "SIGN UP"-->
+        <div class="checkbox-option"> <!--Using "<div> to add a user type checkbox container that contains eleements that creates a ratio that contains user type of "Student, Staff and Admin"-->
+            <label for="studentChoice" style="font-size: 32px;">Student</label><input type="radio" id="studentChoice" style="width: 22px; height: 22px;" name="userType" value="Student"> <!--Using "<label>" to add the checkbot text of "Student" where "<input>" tag is used to insert the ratio (checkbox) of student by using input type of "ratio". It sets the name of input of "userType" to all the input tag which make sure 1 of the checkbox is ticked -->
+            <label for="staffChoice" style="font-size: 32px;">Staff</label><input type="radio" id="staffChoice"  style="width: 22px; height: 22px;" name="userType" value="Staff"> <!--Using "<label>" to add the checkbot text of "Staff" where "<input>" tag is used to insert the ratio (checkbox) of staff by using input type of "ratio". It sets the name of input of "userType" to all the input tag which make sure 1 of the checkbox is ticked -->
+            <label for="adminChoice" style="font-size: 32px;">Admin</label><input type="radio" id="adminChoice"  style="width: 22px; height: 22px;" name="userType" value="Admin"> <!--Using "<label>" to add the checkbot text of "Admin" where "<input>" tag is used to insert the ratio (checkbox) of admin by using input type of "ratio". It sets the name of input of "userType" to all the input tag which make sure 1 of the checkbox is ticked -->
+
+        </div> <!--Close the body tag-->
+        <br></br> <!--Add spaces in the page by using <br> tag-->
+        <div class="student-login-input" id="studentLoginDetailBox" style="display: none;"> <!--Using "<div> to add a student login  form that students uses to login in to Rave WBL Placement Platform account-->
+            <form method="post" action="http://localhost:8080/login"> <!--Using "<form>" tag to insert a sign in form where it has a "method" attribute of post which requests to send the form in the back end (local host 8080) sign up data will be integrated in MongoDB database server -->
+                <input type="email" placeholder="Enter Student Email" name="EmailAddress" id="studentEmailAddress"><br></br> <!--Using "<input>" tag to insert the input field for Account ID-->
+                <input type="password" placeholder="Enter University Password" name="Password" id="studentPassword"><br></br> <!--Using "<input>" tag to insert the input field for Account ID-->
+                <button type="submit" onclick="studentLogin(event)">LOGIN</button><br></br> <!--Using "<Button>" tag to insert submittion button where it uses function of "addAccount(event)" which sends the forms to the backend server, this function has been created in "<script>" tag-->
+                <a href="0.1_sign_up.html">Sign Up if you don't have an account</a> <!--Using "<a>" tag to insert the link to the login page if students/ staffs or admins already has an account-->
+            </form> <!--Close the form tag-->
+        </div> <!--Close the div tag-->
+        <div class="staff-login-input" style="display: none;" id="staffLoginDetailBox"> <!--Using "<div> to add a staff  login form that staff uses to login in to Rave WBL Placement Platform account-->
+            <form method="post" action="http://localhost:8080/login">  <!--Using "<form>" tag to insert a sign in form where it has a "method" attribute of post which requests to send the form in the back end (local host 8080) sign up data will be integrated in MongoDB database server -->
+                <input type="email" placeholder="Enter Staff Email" name="EmailAddress" id="staffEmailAddress"><br></br> <!--Using "<input>" tag to insert the input field for Account ID-->
+                <input type="password" placeholder="Enter University Password" name="Password" id="staffPassword"><br></br> <!--Using "<input>" tag to insert the input field for Account ID-->
+                <button type="submit" onclick="staffLogin(event)">LOGIN</button><br></br> <!--Using "<Button>" tag to insert submittion button where it uses function of "addAccount(event)" which sends the forms to the backend server, this function has been created in "<script>" tag-->
+                <a href="0.1_sign_up.html">Sign Up if you don't have an account</a> <!--Using "<a>" tag to insert the link to the login page if students/ staffs or admins already has an account-->
+            </form> <!--Close the form tag-->
+        </div> <!--Close the div tag-->
+
+        <div class="admin-login-input" style="display: none;" id="adminLoginDetailBox"> <!--Using "<div> to add a login  login form that admin uses to login in to Rave WBL Placement Platform account-->
+            <form method="post" action="http://localhost:8080/login"> <!--Using "<form>" tag to insert a sign in form where it has a "method" attribute of post which requests to send the form in the back end (local host 8080) sign up data will be integrated in MongoDB database server -->
+                <input type="email" placeholder="Enter Admin Email" name="EmailAddress" id="adminEmailAddress"><br></br> <!--Using "<input>" tag to insert the input field for Email Address-->
+                <input type="password" placeholder="Enter University Password" name="Password" id="adminPassword"><br></br> <!--Using "<input>" tag to insert the input field for Password-->
+                <button type="submit" onclick="adminLogin(event)">LOGIN</button><br></br> <!--Using "<Button>" tag to insert submittion button where it uses function of "addAccount(event)" which sends the forms to the backend server, this function has been created in "<script>" tag-->
+                <a href="0.1_sign_up.html">Sign Up if you don't have an account</a> <!--Using "<a>" tag to insert the link to the login page if admins already has an account-->
+            </form> <!--Close the form tag-->
+        </div> <!--Close the div tag-->
+        
+
+    </div> <!--Close the div tag-->
+    
+
+
+<script> //Using "<Script>" tag to insert Javascript within HTML document
+
+    function ToggleUserTypeChoice(){ //Defining function "ToggleTypeChoice" which is used to toggle ratio to each of user type of "Student", "Staff" and "Admin" once it is being selected
+            let userType = null //Defining "userType" variable which is set to null. This variable will change once students selects the user type (i.e. if student selects "Student" "userType" variable will automatically set to "Student" by calling it)
+            staffChoice = document.getElementById("staffChoice") //Defining "staffChoice" variable which gets the element by ID which is added in HTML document ("staffChoice")
+            studentChoice = document.getElementById("studentChoice") //Defining "staffChoice" variable which gets the element by ID which is added in HTML document ("staffChoice")
+            adminChoice = document.getElementById("adminChoice") //Defining "staffChoice" variable which gets the element by ID which is added in HTML document ("staffChoice")
+            staffLoginBox = document.getElementById("staffLoginDetailBox") //Defining "staffChoice" variable which gets the element by ID which is added in HTML document ("staffChoice")
+            studentLoginBox = document.getElementById("studentLoginDetailBox") //Defining "staffChoice" variable which gets the element by ID which is added in HTML document ("staffChoice")
+            adminLoginBox = document.getElementById("adminLoginDetailBox") //Defining "staffChoice" variable which gets the element by ID which is added in HTML document ("staffChoice")
+
+            if(studentChoice.checked){ //Using if statement to checked if "Student" has been checked or selected where if use then it will use "userType" variable to change the value to "Student"
+                staffLoginBox.style.display = "none", //Using "style" which set display for staff login box container to none 
+                adminLoginBox.style.display = "none", //Using "style" which set display for admin login box container to none 
+                studentLoginBox.style.display = "block", //Using "style" which set display for student login box container to block which makes student login box visable 
+                document.getElementById("staffEmailAddress").value="", //It clears staff email address 
+                document.getElementById("staffPassword").value="", //It clears staff password 
+                document.getElementById("adminEmailAddress").value="", //It clears admin email address 
+                document.getElementById("adminPassword").value="" //It clears admin password 
+                userType = "Student" //Using "userType" variable to change the value to "Student"
+                
+
+            }else if(staffChoice.checked){ //Using if statement to checked if "Student" has been checked or selected where if use then it will use "userType" variable to change the value to "Student"
+                staffLoginBox.style.display = "block" //Using  "style" which set display for staff login box container to none 
+                adminLoginBox.style.display = "none", //Using "style" which set display for student login box container to none 
+                studentLoginBox.style.display = "none" //Using "style" which set display for admin login box container to none 
+                document.getElementById("studentEmailAddress").value="", //It clears students email address 
+                document.getElementById("studentPassword").value="", //It clears students password 
+                document.getElementById("adminEmailAddress").value="", //It clears admin email address 
+                document.getElementById("adminPassword").value="" //It clears admin password 
+                userType = "Staff" //Using "userType" variable to change the value to "Staff"
+
+            }else if(adminChoice.checked){ //Using if statement to checked if "Admin" has been checked or selected where if use then it will use "userType" variable to change the value to "Admin"
+                staffLoginBox.style.display = "none" //Using "style" which set display for staff login box container to none 
+                studentLoginBox.style.display = "none" //Using "style" which set display for student login box container to none 
+                adminLoginBox.style.display = "block", //Using "style" which set display for admin login box container to block 
+                document.getElementById("studentEmailAddress").value="", //It clears students email address 
+                document.getElementById("studentPassword").value="" //It clears students password 
+                document.getElementById("staffEmailAddress").value="", //It clears students staff email address 
+                document.getElementById("staffPassword").value="" //It clears staff email address 
+                userType = "Admin" //Using "userType" variable to change the value to "Admin"
+            }
+        }
+        document.getElementById("studentChoice").addEventListener('change', ToggleUserTypeChoice) //Using ".addEventListener" which adds an action (event) once "Student" has been selected
+        document.getElementById("staffChoice").addEventListener('change', ToggleUserTypeChoice) //Using ".addEventListener" which adds an action (event) once "Staff" has been selected
+        document.getElementById("adminChoice").addEventListener('change', ToggleUserTypeChoice) //Using ".addEventListener" which adds an action (event) once "Admin" has been selected
+
+
+
+
+
+    async function studentLogin(event) { //Defining "addAccount" function which has an "event" method added in the parameters which deals with handling actions once submitting the sign up form
+        event.preventDefault() //Using ".preventDefault" which is used to prevent the action from happening
+        const EmailAddress = document.getElementById("studentEmailAddress").value; //Defining "EmailAddress" variable that is used to track  value
+        const Password = document.getElementById("studentPassword").value; //Defining "Password" variable that is used to track  value
+        const userType = document.querySelector('input[name="userType"]:checked')?.value; //Defining "userType" variable that is used to track  value
+
+        if(EmailAddress==="" || Password==="" || !userType){ //Uses an if statement to check empty fields of "EmailAddress", "Password" and "userType" where if yes then it will provide a pop up error and prevents from the functrion from moving until field has been filled
+            alert("Make sure you have filled all the required field please") //Usung "alert" to display a pop message which gives errors to users once form input field has not been filled
+            return; //Usung "return" to prevent from task to go to next task until field has been filled
+        }
+
+        try{ //Using try and catch block which tries to extract the data of job post in the backend, where if there is a problem in backend server then it will jump to catch block where it will provide an error 
+            const processStudentResults = await fetch('http://localhost:8080/login', { //Defining "processStudentResults" variable to request a post method to backend (fetch) which sends the sign in form with users inputed value 
+            method: 'POST', //Using "method" of POST to send the sign in form
+            credentials: 'include', //Using "credentials" to add a cookie to the client side which is specifically be used to receiving "jwt" token key
+            headers: {'Content-Type':'application/json'}, //Using "headers" to set the content of sending data into "json"
+            body: JSON.stringify({EmailAddress, Password, userType:userType}), //Using "body" to convert the requested data of  email address, password and user type into json format
+        })
+
+        if(processStudentResults.ok && userType === 'Student'){ //Using if statement to check if the  request was successfull and user has selected "Student", where it will locate them to student page
+            window.location.href = '1.0_studentPortal_homepage.html' //Using "window.location.href" method to direct admin into admin home page which is in "1.0_studentPortal_homepage.html" html document
+        } else{
+            alert("It does not match") //Displaying a pop up error message using "alert"
+        }
+        } catch(err){ //Using "carch" block to add an error once cleint side has failed to extract data in the database
+            console.log(err) //Printing console error
+        }
+        
+    }
+
+    async function staffLogin(event) { //Defining "addAccount" function which has an "event" method added in the parameters which deals with handling actions once submitting the sign up form
+        event.preventDefault() //Using ".preventDefault" which is used to prevent the action from happening
+        const EmailAddress = document.getElementById("staffEmailAddress").value; //Defining "studentOrStaffId" variable that is used to track  value
+        const Password = document.getElementById("staffPassword").value; //Defining "studentOrStaffId" variable that is used to track  value
+        const userType = document.querySelector('input[name="userType"]:checked')?.value; //Defining "studentOrStaffId" variable that is used to track  value
+
+        if(EmailAddress==="" || Password==="" || !userType){ //Uses an if statement to check empty fields of  "EmailAddress", "Password" and "userType" where if yes then it will provide a pop up error and prevents from the functrion from moving until field has been filled
+            alert("Make sure you have filled all the required field plese") //Usung "alert" to display a pop message which gives errors to users once form input field has not been filled
+            return; //Usung "return" to prevent from task to go to next task until field has been filled
+        }
+        
+        try{ //Using try and catch block which tries to extract the data of job post in the backend, where if there is a problem in backend server then it will jump to catch block where it will provide an error 
+            const processStaffResults = await fetch('http://localhost:8080/login', { //Defining "processStaffResults" variable to request a post method to backend (fetch) which sends the sign in form with users inputed value
+            method: 'POST', //Using "method" of POST to send the sign in form
+            credentials: 'include', //Using "credentials" to add a cookie to the client side which is specifically be used to receiving "jwt" token key
+            headers: {'Content-Type':'application/json'}, //Using "headers" to set the content of sending data into "json"
+            body: JSON.stringify({EmailAddress, Password, userType}) //Using "body" to convert the requested data of  email address, password and user type into json format
+        })
+
+        if(processStaffResults.ok && userType === 'Staff'){ //Using if statement to check if the  request was successfull and user has selected "Staff", where it will locate them to staff page
+            window.location.href = '2.0_staffPortal_homepage.html' //Using "window.location.href" method to direct admin into admin home page which is in "2.0_staffPortal_homepage.html" html document
+        } else{
+            alert("It does not match") //Displaying a pop up error message using "alert"
+        }
+        } catch(err){ //Using "carch" block to add an error once cleint side has failed to extract data in the database
+            console.log(err) //Printing console error
+        }
+
+    }
+    
+    async function adminLogin(event) { //Defining "addAccount" function which has an "event" method added in the parameters which deals with handling actions once submitting the sign up form
+        event.preventDefault() //Using ".preventDefault" which is used to prevent the action from happening
+        const EmailAddress = document.getElementById("adminEmailAddress").value; //Defining "studentOrStaffId" variable that is used to track  value
+        const Password = document.getElementById("adminPassword").value; //Defining "studentOrStaffId" variable that is used to track  value
+        const userType = document.querySelector('input[name="userType"]:checked')?.value; //Defining "studentOrStaffId" variable that is used to track  value
+
+        if(EmailAddress==="" || Password==="" || !userType){ //Uses an if statement to check empty fields of  "EmailAddress", "Password" and "userType" where if yes then it will provide a pop up error and prevents from the functrion from moving until field has been filled
+            alert("Make sure you have filled all the required field please") //Usung "alert" to display a pop message which gives errors to users once form input field has not been filled
+            return; //Usung "return" to prevent from task to go to next task until field has been filled
+        }
+        
+        try{ //Using try and catch block which tries to extract the data of job post in the backend, where if there is a problem in backend server then it will jump to catch block where it will provide an error 
+            const processAdminResults = await fetch('http://localhost:8080/login', { //Defining "processAdminResults" variable to request a post method to backend (fetch) which sends the sign in form with users inputed value
+            method: 'POST', //Using "method" of POST to send the sign in form
+            credentials: 'include', //Using "credentials" to add a cookie to the client side which is specifically be used to receiving "jwt" token key
+            headers: {'Content-Type':'application/json'}, //Using "headers" to set the content of sending data into "json"
+            body: JSON.stringify({EmailAddress, Password, userType}) //Using "body" to convert the requested data of  email address, password and user type into json format
+        })
+
+        if(processAdminResults.ok && userType === 'Admin'){ //Using if statement to check if the  request was successfull and user has selected "Admin", where it will locate them to admin page
+            window.location.href = '3.0_admin.html' //Using "window.location.href" method to direct admin into admin home page which is in "3.0_admin.html" html document
+        } else{
+            alert("It does not match") //Displaying a pop up error message using "alert"
+        }
+        } catch(err){ //Using "carch" block to add an error once cleint side has failed to extract data in the database
+            console.log(err) //Printing console error
+        }
+
+    }
+</script>
+
+</body> <!--Close body tag-->
+</html> <!--Close html tag-->

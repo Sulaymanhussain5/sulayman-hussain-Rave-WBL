@@ -1,0 +1,45 @@
+.admin-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+}
+
+.info-container{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.acceptButton{
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 128px;
+    height: 68px;
+}
+
+
+
+
+.acceptButton:hover{
+    background-color: white;
+    color: green;
+}
+
+.declineButton{
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 128px;
+    height: 68px;
+
+}
+
+.declineButton:hover{
+    background-color: white;
+    color: red;
+}

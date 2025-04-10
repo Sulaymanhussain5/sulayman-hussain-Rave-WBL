@@ -1,0 +1,64 @@
+.rave-wbl-logo { /*The class name in img ("rave-wbl-logo")*/
+    float: left; /*Setting "float" of left which aligns the image to the left side of the navigation box */
+    width: 135px; /*Setting width of 135 pixels*/
+    height: 129px; /*Setting height of 129 pixels*/
+}
+
+
+.navigationBoxContainer { /*The class name in div ("navigationBoxContainer")*/
+    background-color: black; /*Setting the background colour of black*/
+    height: 150px; /*Setting height of 150 pixels*/
+    
+}
+
+
+
+.links { /*The class name in <a> tag ("links")*/
+    position: relative; /*Adding position of "relative" which allows the elements to be moved in to specific position based in the direction it has been given */
+    padding: 10px; /*Setting "padding" by 10 pixels which means adding spaces within the container which adds gaps between elements*/    
+    text-decoration: none; /*Using "text-decoration" which is set to none, which removes the hyperlinks in the text within the <a> tag */
+    font-size: 48px; /*Setting the "font-size" of 48 pixels */
+    color: #00BFFF; /*Setting the text colour of light blue*/
+    top: 35px; /*Moving the link to top by 20 */
+    left: 200px;
+}
+
+.links:hover { /*The class name in div ("links") which styles link text once mouse is hovering to the text */
+    color: aliceblue; /*Setting the text colour of aliceblue*/
+}
+
+.accountIcon { /*The class name in div ("accountIcon")*/
+    float: right; /*Setting "float" of right which aligns the image to the right side of the navigation box */
+    width: 135px; /*Setting width of 135 pixels*/
+    height: 129px; /*Setting height of 129 pixels*/
+}
+
+@media screen and (max-width: 780px) { /*By using @media (media query) screen, to add responsiveness navigation box, where once the max width of the screen size is 780 pixels then the elements that is defined in this function will be responsive. 780 pixels is best screen size for mobile and phone, which is why this has been set */
+    .navigationBoxContainer{
+        height: fit-content;
+        overflow-x: auto;
+    }
+    .rave-wbl-logo { /*The class name in img ("rave-wbl-logo") to make logo not visible once screen is reduced to 780 pixels*/
+        display: none; /*Setting "display" by none which makes the element not visable*/
+    }
+
+    .links{ /*The class name in <a> tag ("links") to make the links responsive*/
+        top: 1px;
+        display: block; /*Using block method in "display" which adds block to the image tag, where it makes it easier for the element to align to the center of the page */
+        text-align: center; /*Setting "text-align" to center which positions the links to the center (middle) of the container*/
+        padding: 14px 16px; /*Setting "padding" to 14 pixels (adding 14 pixels of space in top and bottom of the element) and 16 pixels (adding 16 pixels of space in left and right of the element)*/
+
+    }
+
+    .accountIcon{ /*The class name in div tag ("accountIcon") to make the account not visible once screen is reduced to 780 pixels*/
+        display: none; /*Setting "display" by none which makes the element not visable*/
+    }
+    
+}
+
+
+
+
+
+
+

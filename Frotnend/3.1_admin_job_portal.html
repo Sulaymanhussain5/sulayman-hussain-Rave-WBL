@@ -1,0 +1,97 @@
+<!--------------------------------------------------------------------------STARTING OFF HTML DOCUMENT------------------------------------------------------------->
+<!--Before developing in HTML, i am setting up a document by adding the styles that will be used to make the page user friendly and intuitive  and it additionally adds a 
+bootstrap API which is used to make some of the website dynamic which is based on the class name that has been inserted in each containers. This way it saves time for developers
+to style all the component or elements to make the web page user friendly (<link>). Additionally it uses <meta> tag to set up the view point of the screen which is crucial to make 
+the system available to different screen size like phones, tablets, desktop (making it responsive). Additionally it uses <meta> tag to insert a UTF (Unicode Transform Unit)-8 which adds 
+different type of special characters and special symbols in the website  -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ADMIN JOB PORTAL </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/account.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/student_portal_homepage.css"> <!--Using <link> tag to link the CSS document (using rel attribute of "stylesheet") to student_portal_homepage.css which deals with the student portal home page design-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
+
+</head>
+
+<body>
+        <!---------------------------------HEADER----------------------------------------------------->
+    <nav class="navigationBoxContainer"> <!--Using "<nav> to add a navigation box, additionally it has a attribute of "class" which is name "navigationBoxContainer" is used as a reference when using css to style this component-->
+        <a href="3.0_admin.html"><img src="Assets/rave_wbl_logo_v2.png" class="rave-wbl-logo"></a> <!--Using "<a>" tag to link to html document of "3.0_admin.html" by using attribute of "href", once the students clicks in the Rave WBL logo which is stored in "<img>" ("src="Assets/rave_wbl_logo_v2.png" (directory in where the image is stored)). Additionally, adding "alt" attribute to insert the name of the image-->
+        <a href="3.0_admin.html" class="links">Admin</a> <!--Using "<a>" tag to link to html document of "3.0_admin.html" by using attribute of "href", once the students clicks in the nav link "Admin"-->
+        <a href="3.1_admin_job_portal.html" class="links">Jobs Portal</a> <!--Using "<a>" tag to link to html document of "3.1_admin_job_portal.html" by using attribute of "href", once the students clicks in the nav link "Job Portal"-->
+        <a href="3.2_admin_student_progressl.html" class="links">Student Progress</a> <!--Using "<a>" tag to link to html document of "3.2_admin_student_progressl.html" by using attribute of "href", once the students clicks in the nav link "Student Progress"-->
+        <a href="3.0_admin.html"><img src="Assets/account_icon.png" class="accountIcon"></a> <!--Using "<a>" tag to link to html document of "3.0_admin.html" by using attribute of "href", once the students clicks in the account icon which is stored in "<img>" ("src="Assets/account_icon.png"  (directory in where the image is stored)).Additionally, adding "alt" attribute to insert the name of the image-->
+    </nav>  <!--Close the nav tag-->
+        <!-------------------------------------------------------------------------------------------->
+
+    <br></br>
+
+   <div class="admin-container" id="admin-container"></div>
+    <!---------------------------------SEARCH BAR AND FILTER BOX----------------------------------------------------->
+    <div class="searchFilterContainer"> <!--Using "<div>" tag to add a component of search box and filter bar, this holds all elements that will be used as a box that holds all elements that is related to search and filter bar. Additionally, attribute of "class" which is named "searchFilterContainer" is used as a reference when using css to style this component -->
+        <div class="searchAndFilterBox"> <!--Using "<div>" tag to add a component of search box and filter bar, this holds all elements that will be included in the search and filter bar . Additionally, attribute of "class" which is named "searchAndFilterBox" is used as a reference when using css to style this component -->
+            <input class="searchBox" type="search" placeholder="Job Role, Industry name, Course" id="searchBar"> <!-- Using "<input>" tag which creates the search box ("type="submit"") with a text within a search box that includes the letter " Job Role, Industry name, Course" ("placeholder"). Additionally "id" which is named "searchBar" will be used as a reference when working with javascript document to make the search box interactive and dynamic -->
+            <select class="filter"> <!--Using "<select>" tag to integrate drop down menu for project type with an attribute of "class" ("filter") for CSS referencing-->
+                <option>Project Type</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "Project Type" is a default choice which shows that they want both internal and external project.-->
+                <option>Internal</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "Internal" is  choice which shows that they want both internal project.-->
+                <option>External</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "External" is a  choice which shows that they want both external project.-->
+            </select> <!--Close select tag-->
+            <select class="filter"> <!--Using "<select>" tag to integrate drop down menu for job type with an attribute of "class" ("filter") for CSS referencing-->
+                <option>Job Type</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "Job Type" is a default choice which shows that they want all job types.-->
+                <option>Part Time</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "Part Time" is a  choice which shows that they want part time jobs.-->
+                <option>Internship</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "Internship" is a  choice which shows that they want internship jobs.-->
+                <option>Placement</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "Placement" is a  choice which shows that they want placement jobs.-->
+            </select> <!--Close select tag-->
+            <select class="filter"> <!--Using "<select>" tag to integrate drop down menu for courses with an attribute of "class" ("filter") for CSS referencing-->
+                <option>Course</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "Course" is a default choice which shows that they want all courses.-->
+                <option>Computer Science</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "Computer Science" is a  choice which shows that they want jobs within Computer Science field.-->
+                <option>Fashion</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "Fashion" is a  choice which shows that they want jobs within Fashion filed.-->
+                <option>CyberSecurity</option> <!--Using "<option>" tag to add an choice when students selects drop down menu, "CyberSecurity" is a  choice which shows that they want jobs within Cyber Security field.-->
+            </select> <!--Close select tag-->
+        </div> <!--Close div tag-->
+    </div> <!--Close div tag-->
+    <!--------------------------------------------------------------------------------------------------------->
+    <br></br> <!--Using "<br>" tag to add space-->
+    <br></br> <!--Using "<br>" tag to add space-->
+
+
+
+    <!------------------------------------------JOB VACANCY--------------------------------------------------------------------------------------->
+        <div class="job-vacancy-container" id="job-vacancy-container"> <!--Using "<div>" tag to add a component of Job vancancy, this holds all elements that will be used as a box that holds all elements that is related to job vancancy. Additionally, attribute of "class" which is named "job-vacancy-container" is used as a reference when using css to style this component and "id" attribute is used as a reference when working with javascript document to make the job vacancy dynamic when search and filter bar is being used -->
+        </div> <!--Close div tag-->
+        <!--------------------------------------------------------------------------------------------------------------------------------->
+
+
+        <br></br> <!--Using "<br>" tag to add space-->
+
+        <!------------------------------------------------FOOTER------------------------------------------------------------------------->
+        <div class="footer-container"> <!--Using "<div>" tag to add a component of footer, this holds all elements that will be included in the footer  (footer). Additionally, attribute of "class" which is named "footer-container" is used as a reference when using css to style this component -->
+            <footer> <!--Using "<footer>" tag to insert footer of the webpage, this will hold all footer elements-->
+                <img src="Assets/rave_wbl_logo_v2.png" alt="Rave WBL Logo"> <!--Using "<img>" tag to insert aws logo of Rave WBL (src="Assets/rave_wbl_logo.png"). Additionally, "alt" attribute is used to add image name -->
+                <p>Copyright &copy; Rave WBL All Rights Reserved</p> <!--Using "<p>" tag to insert a text within the footer which will state the copy right, it uses "&copy" which inserts  "©"-->
+            </footer>  <!--Close footer tag-->
+        </div>  <!--Close div tag-->
+        <!------------------------------------------------------------------------------------------------------------------------->
+
+        <!--------------------------------------LINKING JAVASCRIPT------------------------------------------------------------------->
+        <script src="JavaScript/search_bar_v2.js"></script> <!--Using "<script>" tag to insert a javascript document link ("src="JavaScript/search_bar.js"") which deals with making search box interactive-->
+        <script src="JavaScript/filter_v2.js"></script> <!--Using "<script>" tag to insert a javascript document link ("src="JavaScript/filter.js"") which deals with making filter interactive-->
+        <script src="JavaScript/admin_dynamic_job_post.js"></script> <!--Using "<script>" tag to add a JavaScript document that makes the page dynamic, when it comes to integrating job vacancy to the student / Job portal once it has been posted by staff -->
+                <!---------------------------------------------------------------------------------------------------------------------------->
+
+    
+
+    
+
+
+</body>
+</html>
