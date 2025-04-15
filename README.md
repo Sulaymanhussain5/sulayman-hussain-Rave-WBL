@@ -15,4 +15,26 @@ Rave WBL Placement Platform is a job vacancy system for students at Ravensbourne
 
 . Admin Page = Make decisions in Student application form
 
-. 
+
+#Tools / API
+. Visual Studio Code = System Development (Front and Back end)
+
+. Google Gemini Flash 1.5 = AI Chatbot 
+
+. JWT (JSON Web Token) = Login Authentication 
+
+
+
+#Language 
+. HTML (HyperText Markup Language) = Rendering elements 
+
+. CSS (Cascading Style Sheet)= Positioning, styling and adding responsiveness to elements 
+
+. JavaScript = Adding dynamics and sending requests to backend server
+
+. Express.js = Creating Routes to handle data 
+
+. Node.js = Adding Scalability to Rave WBL Placement Platform system 
+
+
+
