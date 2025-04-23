@@ -4,6 +4,10 @@ Rave WBL Placement Platform is a job vacancy system designed for students at Rav
 
 I chose to develop this system as my final project to support students in finding jobs related to their fields of study, such as Computer Science, Fashion, CyberSecurity and more. Additionally, the sytsem helps staff track student job application form progress, where if students is unsuccessfull in job application, then staff will be aware and provide an additionall project to student. 
 
+
+
+
+
 **Core Functionality**
 
 . **Job Posts** = Staff can post jobs, where they must complete a form. Staff can insert course name, project type, job description, skills and so on which describes the job. 
@@ -21,6 +25,8 @@ I chose to develop this system as my final project to support students in findin
 
 
 
+
+
 **Tools / API**
 
 . **Visual Studio Code** = System Development (Front and Back end)
@@ -28,6 +34,9 @@ I chose to develop this system as my final project to support students in findin
 . **Google Gemini Flash 1.5** = AI Chatbot 
 
 .**JWT (JSON Web Token)** = Login Authentication 
+
+
+
 
 
 
@@ -40,6 +49,10 @@ I chose to develop this system as my final project to support students in findin
 . **JavaScript** = Adding dynamics and sending requests to backend server
 
 
+
+
+
+
 **Framework**
 
 . **Express.js** = Creating Routes to handle data 
@@ -47,6 +60,9 @@ I chose to develop this system as my final project to support students in findin
 . **Node.js** = Adding Scalability to Rave WBL Placement Platform system 
 
 . **Flask.js** = Integrating AI Chatbot functionality with static page that includes a message box for students to communicate with AI
+
+
+
 
 
 
