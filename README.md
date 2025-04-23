@@ -1,5 +1,4 @@
-#Rave WBL Placemet Platform 
-
+**Rave WBL Placemet Platform **
 Rave WBL Placement Platform is a job vacancy system for students at Ravensbourne University that are enrolled in WBL (Work Based Learning) module. It also allows staff to monitor student progress when it comes to applying for jobs.
 
 #Core Functionality 
@@ -32,9 +31,28 @@ Rave WBL Placement Platform is a job vacancy system for students at Ravensbourne
 
 . JavaScript = Adding dynamics and sending requests to backend server
 
+
+#Framework
+
 . Express.js = Creating Routes to handle data 
 
 . Node.js = Adding Scalability to Rave WBL Placement Platform system 
+
+. Flask.js = Integrating AI Chatbot functionality with static page that includes a message box for students to communicate with AI
+
+
+
+#How to use 
+Please download the following packages or extensions  to use this system:
+.Nodemon 
+.MongoDb 
+.LiveServer
+.jsonwebtoken
+.cookie-parser
+
+Once these packages or extensions has been downloaded, use cd command in the terminal and  go to **Backend** driectory and write **nodemon server.js** to run the backend server. Additionally, use cd command in terminal and go to **Backend/Flask** directory and write **nodemon app.py** to run the flask server that includes a code that handles communication between students and AI chatbot.  Please download **LiveServer** extention in visual studio code and click **Go Live** (positioned in bottom right) to run the front end side of the system. 
+
+
 
 
 
